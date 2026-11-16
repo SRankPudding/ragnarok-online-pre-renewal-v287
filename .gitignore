@@ -1,0 +1,13 @@
+.env
+runtime/
+secrets/
+profile/
+assets/
+build/
+node_modules/
+update-config.json
+*.grf
+*.rgz
+*.sql
+*.zip
+*.log

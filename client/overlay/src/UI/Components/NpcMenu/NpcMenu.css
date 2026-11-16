@@ -1,0 +1,128 @@
+:host {
+	width: 276px;
+	height: 116px;
+	top: 285px;
+	left: 100px;
+}
+
+#NpcMenu {
+	position: absolute;
+	border-radius: 5px;
+	width: 276px;
+	height: 116px;
+	background-color: white;
+	padding: 2px;
+}
+
+#NpcMenu .title {
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+	width: 260px;
+	padding-left: 3px;
+	padding-top: 3px;
+}
+
+#NpcMenu .container {
+	border-radius: 5px;
+	border: 1px solid #c1c6c2;
+	width: 269px;
+	height: 109px;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+
+#NpcMenu .middle {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#NpcMenu .content {
+	white-space: pre-wrap;
+	background-color: #f9f9f9;
+	width: 260px;
+	height: 80px;
+	padding-left: 3px;
+	margin-top: 5px;
+}
+
+#NpcMenu .content div {
+	width: auto;
+	height: 17px;
+	display: block;
+	padding-top: 3px;
+	padding-left: 5px;
+}
+
+#NpcMenu .npc-quest-option {
+	display: inline-block;
+	width: 16px;
+	color: #9b480c;
+	font-weight: bold;
+}
+
+#NpcMenu .content div.selected {
+	background-color: #cde0ff;
+}
+
+#NpcMenu .btn {
+	position: absolute;
+	width: 42px;
+	height: 20px;
+	bottom: 5px;
+}
+
+#NpcMenu .cancel {
+	right: 4px;
+}
+
+#NpcMenu .ok {
+	right: 50px;
+}
+:host { width: min(380px, 90vw); height: auto; }
+#NpcMenu { position: relative; width: 100%; height: auto; box-sizing: border-box; }
+#NpcMenu .container { box-sizing: border-box; width: 100%; height: auto; padding: 5px 5px 28px; }
+#NpcMenu .middle { overflow-y: auto; }
+#NpcMenu .content { width: auto; height: auto; max-height: min(480px, 52vh); }
+#NpcMenu .content div { min-height: 17px; height: auto; }
+
+/* v2.34: NPC choices as clear rows - one click picks, no Windows-style list */
+:host { width: min(440px, 92vw); }
+#NpcMenu { padding: 0; background: #f4e9d0; border: 1px solid #b9954a; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55); font: 14px/1.4 system-ui, sans-serif; color: #2b1d14; }
+#NpcMenu .container { padding: 8px 8px 36px; border: 0; border-radius: 0; }
+#NpcMenu .title { display: none; }
+#NpcMenu .middle { overflow: visible; }
+#NpcMenu .content { display: flex; flex-direction: column; gap: 4px; margin: 0; padding: 0 4px 0 0; background: transparent; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #b9954a transparent; }
+#NpcMenu .content div { box-sizing: border-box; flex: none; padding: 7px 10px; background: #fbf4e2; border: 1px solid #d6c08f; border-radius: 6px; cursor: pointer; }
+#NpcMenu .content div:hover { background: #fffaf0; border-color: #b9954a; }
+#NpcMenu .content div.selected { background: #f3d98c; border-color: #a67c1e; }
+#NpcMenu .npc-quest-option { color: #c2570a; }
+#NpcMenu .btn { bottom: 8px; }
+#NpcMenu .cancel { right: 10px; }
+#NpcMenu .ok { right: 56px; }
+
+/* v2.67: pictures on known entries; main menus (crafting) as tiles */
+#NpcMenu .npc-option-icon { display: inline-block; width: 26px; font-size: 16px; text-align: center; }
+#NpcMenu .content.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+#NpcMenu .content.tiles div { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 74px; padding: 8px 6px; text-align: center; font-weight: 600; }
+#NpcMenu .content.tiles .npc-option-icon { width: auto; font-size: 28px; }
+
+/* v2.78: text buttons in the game's style instead of the old bitmap buttons */
+#NpcMenu ui-button.btn {
+	box-sizing: border-box;
+	width: auto !important;
+	min-width: 62px;
+	height: 24px !important;
+	padding: 0 10px;
+	border: 1px solid #a67c1e !important;
+	border-radius: 6px;
+	background: #f3d98c !important;
+	color: #2b1d14;
+	font: 600 12px/22px "Segoe UI", sans-serif;
+	text-align: center;
+	cursor: pointer;
+}
+#NpcMenu ui-button.btn:hover { background: #f8e6ad !important; }
+#NpcMenu ui-button.ok::after { content: 'OK'; }
+#NpcMenu ui-button.cancel::after { content: 'Cancel'; }
+#NpcMenu .ok { right: 82px; }

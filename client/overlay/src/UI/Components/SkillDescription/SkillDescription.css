@@ -1,0 +1,42 @@
+:host {
+	top: 0px;
+	left: 0px;
+}
+
+#SkillDescription {
+	position: absolute;
+	border-radius: 5px;
+	padding: 1px;
+	border: 1px solid #c5c5c5;
+	line-height: 18px;
+	letter-spacing: 0px;
+}
+#SkillDescription .content {
+	padding: 5px;
+	border-radius: 5px;
+	background-color: white;
+	width: 278px;
+}
+#SkillDescription .close {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	border: none;
+	width: 9px;
+	height: 10px;
+	padding: 0px;
+	margin: 0px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+#SkillDescription .content {
+	box-sizing: border-box;
+	width: min(340px, 90vw);
+	max-height: 65vh;
+	overflow: auto;
+	overflow-wrap: anywhere;
+	padding: 9px 14px 9px 9px;
+	background: #fff4de;
+	color: #241c2d;
+}

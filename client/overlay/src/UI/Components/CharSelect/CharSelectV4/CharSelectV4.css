@@ -1,0 +1,538 @@
+:host {
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+#CharSelectV4 {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#CharSelectV4 .char_select_container {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding-top: 20px;
+	padding-left: 5px;
+}
+
+/** Box **/
+#CharSelectV4 .char_list {
+	flex: 1;
+	max-width: 800px;
+	min-width: 157px;
+	height: 595px;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow-y: auto;
+}
+
+#CharSelectV4 .box_select {
+	position: absolute;
+	width: 157px;
+	height: 159px;
+	top: 40px;
+	margin-left: -5px;
+}
+#CharSelectV4 .char_canvas {
+	width: 157px;
+	height: 195px;
+	position: relative;
+	z-index: 10;
+}
+#CharSelectV4 .char_canvas .name {
+	position: absolute;
+	bottom: 17px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: #15154a;
+}
+
+#CharSelectV4 .char_canvas .job_icon {
+	position: absolute;
+	top: 15px;
+	right: 12px;
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+/** Slot info **/
+#CharSelectV4 .slotinfo {
+	position: absolute;
+	top: 195px;
+	right: 10px;
+	height: 20px;
+	display: block;
+	border: 1px solid #c6cee7;
+	border-radius: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#CharSelectV4 .slotinfo .number {
+	color: #58709e;
+	font-weight: bold;
+	margin-right: 10px;
+}
+#CharSelectV4 .slotinfo .content {
+	color: #555;
+	top: 6px;
+	right: 8px;
+}
+
+/** Page info **/
+#CharSelectV4 .pageinfo {
+	position: absolute;
+	left: 275px;
+	top: 185px;
+	font-weight: bold;
+	color: #646464;
+}
+#CharSelectV4 .pageinfo .current {
+	color: #fe3b7d;
+}
+
+/** Characters infos **/
+#CharSelectV4 .charinfo {
+	height: 585px;
+	max-height: 80vh;
+	width: 185px;
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	margin-left: 10px;
+	position: relative;
+}
+#CharSelectV4 .charinfo div {
+	position: absolute;
+	width: 90px;
+	height: 13px;
+}
+#CharSelectV4 .charinfo .name {
+	left: 52px;
+	top: 2px;
+	white-space: nowrap;
+}
+#CharSelectV4 .charinfo .job {
+	left: 60px;
+	top: 105px;
+}
+#CharSelectV4 .charinfo .lvl {
+	left: 60px;
+	top: 123px;
+}
+#CharSelectV4 .charinfo .exp {
+	left: 60px;
+	top: 140px;
+}
+#CharSelectV4 .charinfo .hp {
+	left: 60px;
+	top: 157px;
+}
+#CharSelectV4 .charinfo .sp {
+	left: 60px;
+	top: 174px;
+}
+#CharSelectV4 .charinfo .map {
+	left: 60px;
+	top: 89px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#CharSelectV4 .charinfo .str {
+	left: 60px;
+	top: 191px;
+}
+#CharSelectV4 .charinfo .agi {
+	left: 60px;
+	top: 208px;
+}
+#CharSelectV4 .charinfo .vit {
+	left: 60px;
+	top: 225px;
+}
+#CharSelectV4 .charinfo .int {
+	left: 60px;
+	top: 242px;
+}
+#CharSelectV4 .charinfo .dex {
+	left: 60px;
+	top: 259px;
+}
+#CharSelectV4 .charinfo .luk {
+	left: 60px;
+	top: 276px;
+}
+
+/** Buttons **/
+#CharSelectV4 .btn.delete {
+	position: absolute;
+	width: 131px;
+	height: 24px;
+}
+
+#CharSelectV4 .btn.canceldelete {
+	position: absolute;
+	width: 131px;
+	height: 24px;
+}
+
+#CharSelectV4 .btn.finaldelete {
+	position: absolute;
+	width: 131px;
+	height: 24px;
+}
+
+#CharSelectV4 .btn.delete,
+#CharSelectV4 .btn.canceldelete,
+#CharSelectV4 .btn.finaldelete {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+	line-height: 24px;
+}
+
+#CharSelectV4 .btn.ok {
+	position: absolute;
+	width: 165px;
+	height: 110px;
+	color: white;
+	padding-top: 20px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+	text-align: center;
+}
+
+#CharSelectV4 .btn.ok:hover {
+	text-shadow: #000 1px 1px;
+}
+
+#CharSelectV4 .ok,
+#CharSelectV4 .make {
+	right: 15px;
+	top: 380px;
+}
+#CharSelectV4 .cancel {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 65px;
+	height: 24px;
+}
+#CharSelectV4 .delete {
+	right: 33px;
+	top: 300px;
+}
+
+#CharSelectV4 .canceldelete {
+	right: 33px;
+	top: 300px;
+}
+
+#CharSelectV4 .finaldelete {
+	right: 33px;
+	top: 330px;
+}
+
+#CharSelectV4 .char_select_container {
+	background-color: #17243a;
+	border: 1px solid #7184a4;
+}
+
+#CharSelectV4 .char_canvas {
+	background-color: #2a3b58;
+}
+
+#CharSelectV4 ui-button.btn {
+	box-sizing: border-box;
+	display: grid;
+	place-items: center;
+	border: 1px solid #91a7c7;
+	border-radius: 5px;
+	background: #253a58 !important;
+	color: #f5f7ff;
+	font: 600 13px "Segoe UI", sans-serif;
+	cursor: pointer;
+}
+
+#CharSelectV4 ui-button.btn.ok {
+	height: 36px;
+	padding: 0;
+	background: #ffd183 !important;
+	color: #22263a;
+	text-shadow: none;
+}
+
+#CharSelectV4 .timedelete {
+	position: relative;
+	height: 20px;
+	width: 100px;
+	top: -150px;
+	left: 55px;
+}
+
+#CharSelectV4 .hidden {
+	display: none;
+}
+
+/* v2.66: parchment, plum and gold like the NPC windows; class name next to the class icon */
+#CharSelectV4 .char_select_container {
+	background-color: rgba(244, 233, 208, 0.94);
+	border: 1px solid #b9954a;
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+	color: #2b1d14;
+}
+#CharSelectV4 .char_canvas {
+	background-color: #e9dcbc;
+}
+#CharSelectV4 .char_canvas .name {
+	color: #34203f;
+}
+#CharSelectV4 .char_canvas .job_name {
+	position: absolute;
+	top: 20px;
+	left: 12px;
+	right: 42px;
+	overflow: hidden;
+	color: #4a2a55;
+	font: 600 12px "Segoe UI", sans-serif;
+	text-align: right;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+#CharSelectV4 ui-button.btn {
+	border: 1px solid #a67c1e;
+	background: #f3d98c !important;
+	color: #2b1d14;
+}
+#CharSelectV4 ui-button.btn:hover {
+	background: #f8e6ad !important;
+}
+#CharSelectV4 ui-button.btn.ok {
+	border-color: #b9954a;
+	background: linear-gradient(#4a2a55, #34203f) !important;
+	color: #f7d88f;
+}
+#CharSelectV4 ui-button.btn.ok:hover {
+	background: linear-gradient(#5b3568, #43294f) !important;
+}
+#CharSelectV4 .slotinfo {
+	border-color: #b9954a;
+}
+#CharSelectV4 .pageinfo .current {
+	color: #4a2a55;
+}
+
+/* v2.67: modern look - dark glass panel, own slot cards instead of the old bitmaps */
+#CharSelectV4 .char_select_container {
+	padding: 58px 18px 18px;
+	background: rgba(22, 15, 30, 0.8);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(247, 216, 143, 0.55);
+	border-radius: 16px;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+	color: #f4e9d0;
+}
+#CharSelectV4 .char_select_container::before {
+	content: 'Choose your character';
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	color: #f7d88f;
+	font: 600 20px "Segoe UI", sans-serif;
+	letter-spacing: 0.5px;
+}
+#CharSelectV4 .cancel { top: 14px; right: 18px; }
+#CharSelectV4 .char_list { background: transparent; scrollbar-width: thin; scrollbar-color: #b9954a transparent; }
+#CharSelectV4 .char_canvas { background: transparent; cursor: pointer; }
+#CharSelectV4 .char_canvas canvas { background-image: none !important; }
+#CharSelectV4 .char_canvas::before {
+	content: '';
+	position: absolute;
+	inset: 5px;
+	z-index: -1;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 12px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+	transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+#CharSelectV4 .char_canvas:hover::before { border-color: rgba(247, 216, 143, 0.6); }
+#CharSelectV4 .char_canvas.selected::before {
+	border-color: #f7d88f;
+	background: linear-gradient(180deg, rgba(247, 216, 143, 0.3), rgba(74, 42, 85, 0.45));
+	box-shadow: 0 0 18px rgba(247, 216, 143, 0.45);
+}
+#CharSelectV4 .char_canvas.empty::after {
+	content: '+';
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	color: rgba(247, 216, 143, 0.4);
+	font: 300 46px "Segoe UI", sans-serif;
+	pointer-events: none;
+}
+#CharSelectV4 .char_canvas.empty:hover::after { color: #f7d88f; }
+#CharSelectV4 .char_canvas .name { bottom: 16px; color: #fff6e0; font: 600 13px "Segoe UI", sans-serif; text-shadow: 0 1px 2px #000; }
+#CharSelectV4 .char_canvas .job_icon { top: 13px; right: 14px; }
+#CharSelectV4 .char_canvas .job_name {
+	top: 14px;
+	left: 14px;
+	right: auto;
+	max-width: 98px;
+	padding: 2px 8px;
+	border: 1px solid rgba(247, 216, 143, 0.45);
+	border-radius: 10px;
+	background: rgba(74, 42, 85, 0.92);
+	color: #f7d88f;
+	text-align: left;
+}
+#CharSelectV4 .char_canvas .job_name:empty { display: none; }
+
+/* Info panel: own labels instead of the bitmap with the baked-in ones */
+#CharSelectV4 .charinfo {
+	width: 196px;
+	margin-top: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0.06);
+	background-image: none !important;
+}
+#CharSelectV4 .charinfo::before {
+	content: 'Character';
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	color: #f7d88f;
+	font: 600 15px "Segoe UI", sans-serif;
+}
+#CharSelectV4 .charinfo > div:not(.pageinfo) {
+	left: 84px;
+	width: 100px;
+	height: 16px;
+	overflow: visible;
+	color: #fff6e0;
+	font: 13px "Segoe UI", sans-serif;
+	white-space: nowrap;
+}
+#CharSelectV4 .charinfo > div:not(.pageinfo)::before {
+	position: absolute;
+	left: -68px;
+	width: 60px;
+	color: #c9b27a;
+	font-size: 11px;
+	letter-spacing: 0.5px;
+}
+#CharSelectV4 .charinfo .job { top: 52px; }
+#CharSelectV4 .charinfo .job::before { content: 'CLASS'; }
+#CharSelectV4 .charinfo .lvl { top: 76px; }
+#CharSelectV4 .charinfo .lvl::before { content: 'LEVELS'; }
+#CharSelectV4 .charinfo .map { top: 100px; overflow: hidden; text-overflow: ellipsis; }
+#CharSelectV4 .charinfo .map::before { content: 'MAP'; }
+#CharSelectV4 .charinfo .exp { top: 124px; }
+#CharSelectV4 .charinfo .exp::before { content: 'EXP'; }
+#CharSelectV4 .charinfo .hp { top: 148px; }
+#CharSelectV4 .charinfo .hp::before { content: 'HP'; }
+#CharSelectV4 .charinfo .sp { top: 172px; }
+#CharSelectV4 .charinfo .sp::before { content: 'SP'; }
+#CharSelectV4 .charinfo .str { top: 206px; }
+#CharSelectV4 .charinfo .str::before { content: 'STR'; }
+#CharSelectV4 .charinfo .agi { top: 230px; }
+#CharSelectV4 .charinfo .agi::before { content: 'AGI'; }
+#CharSelectV4 .charinfo .vit { top: 254px; }
+#CharSelectV4 .charinfo .vit::before { content: 'VIT'; }
+#CharSelectV4 .charinfo .int { top: 278px; }
+#CharSelectV4 .charinfo .int::before { content: 'INT'; }
+#CharSelectV4 .charinfo .dex { top: 302px; }
+#CharSelectV4 .charinfo .dex::before { content: 'DEX'; }
+#CharSelectV4 .charinfo .luk { top: 326px; }
+#CharSelectV4 .charinfo .luk::before { content: 'LUK'; }
+#CharSelectV4 .charinfo .pageinfo { display: none; }
+
+#CharSelectV4 ui-button.btn {
+	border: 1px solid rgba(247, 216, 143, 0.5);
+	border-radius: 9px;
+	background: rgba(255, 255, 255, 0.08) !important;
+	color: #f4e9d0;
+}
+#CharSelectV4 ui-button.btn:hover { background: rgba(255, 255, 255, 0.18) !important; }
+#CharSelectV4 .delete, #CharSelectV4 .canceldelete { top: 372px; right: 32px; }
+#CharSelectV4 .finaldelete { top: 402px; right: 32px; }
+#CharSelectV4 ui-button.btn.ok, #CharSelectV4 ui-button.btn.make {
+	top: 446px;
+	right: 15px;
+	width: 166px;
+	height: 46px;
+	border: 0;
+	border-radius: 12px;
+	background: linear-gradient(180deg, #f9dd94, #d6a445) !important;
+	box-shadow: 0 6px 16px rgba(214, 164, 69, 0.35);
+	color: #2b1d14;
+	font: 700 16px "Segoe UI", sans-serif;
+	letter-spacing: 1px;
+}
+#CharSelectV4 ui-button.btn.ok:hover, #CharSelectV4 ui-button.btn.make:hover {
+	background: linear-gradient(180deg, #ffe9ae, #e2b253) !important;
+}
+
+/* v2.70: Play label centred in the button */
+#CharSelectV4 ui-button.btn.ok, #CharSelectV4 ui-button.btn.make {
+	padding: 0;
+	line-height: 46px;
+	text-align: center;
+}
+
+/* v2.71: the map name gets its own full-width line so long names fit */
+#CharSelectV4 .charinfo .exp { top: 100px; }
+#CharSelectV4 .charinfo .hp { top: 124px; }
+#CharSelectV4 .charinfo .sp { top: 148px; }
+#CharSelectV4 .charinfo > div.map {
+	top: 174px;
+	left: 16px;
+	box-sizing: border-box;
+	width: 166px;
+	height: 36px;
+	padding-top: 17px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#CharSelectV4 .charinfo > div.map::before { top: 0; left: 0; }
+#CharSelectV4 .charinfo .str { top: 226px; }
+#CharSelectV4 .charinfo .agi { top: 250px; }
+#CharSelectV4 .charinfo .vit { top: 274px; }
+#CharSelectV4 .charinfo .int { top: 298px; }
+#CharSelectV4 .charinfo .dex { top: 322px; }
+#CharSelectV4 .charinfo .luk { top: 346px; }
+#CharSelectV4 .delete, #CharSelectV4 .canceldelete { top: 386px; }
+#CharSelectV4 .finaldelete { top: 414px; }
+#CharSelectV4 .char_canvas .job_icon { top: 14px; left: 15px; right: auto; }
+#CharSelectV4 .char_canvas .job_name {
+	top: 14px;
+	left: 45px;
+	right: 11px;
+	max-width: none;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#CharSelectV4 .charinfo .pageinfo { display: none !important; }

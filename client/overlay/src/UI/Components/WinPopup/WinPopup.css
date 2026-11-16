@@ -1,0 +1,92 @@
+:host {
+	width: 280px;
+	height: 120px;
+	top: 0px;
+	left: 0px;
+}
+
+#win_popup {
+	position: absolute;
+	width: 280px;
+	height: 120px;
+	z-index: 999;
+}
+
+#win_popup .container {
+	position: absolute;
+	height: 70px;
+	width: 270px;
+	top: 20px;
+	overflow: auto;
+}
+
+#win_popup .text {
+	padding: 5px 10px 0px 10px;
+}
+
+#win_popup .buttonscontainer {
+	position: absolute;
+	height: 25px;
+	width: 280px;
+	top: 95px;
+}
+
+#win_popup .btns {
+	position: absolute;
+	bottom: 2px;
+	right: 3px;
+}
+
+#win_popup .btn {
+	border: 0;
+	width: 42px;
+	height: 20px;
+	bottom: 4px;
+	margin-left: 3px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+/* v2.71: message boxes ("Please wait...", errors, questions) in the parchment style */
+#win_popup {
+	box-sizing: border-box;
+	overflow: hidden;
+	border: 1px solid #b9954a;
+	border-radius: 8px;
+	background: #f4e9d0 !important;
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+	color: #2b1d14;
+	font: 13px/1.4 "Segoe UI", sans-serif;
+}
+#win_popup::before {
+	content: 'Message';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 20px;
+	padding-left: 10px;
+	background: linear-gradient(#4a2a55, #34203f);
+	color: #f7d88f;
+	font: 600 12px/20px "Segoe UI", sans-serif;
+}
+#win_popup .container { top: 22px; height: 68px; }
+
+/* v2.78: text buttons in the game's style instead of the old bitmap buttons */
+#win_popup .btn {
+	box-sizing: border-box;
+	width: auto !important;
+	min-width: 62px;
+	height: 24px !important;
+	padding: 0 10px;
+	border: 1px solid #a67c1e !important;
+	border-radius: 6px;
+	background: #f3d98c !important;
+	color: #2b1d14;
+	font: 600 12px/22px "Segoe UI", sans-serif;
+	text-align: center;
+	cursor: pointer;
+}
+#win_popup .btn:hover { background: #f8e6ad !important; }
+#win_popup .buttonscontainer { top: 92px; }
+#win_popup .btns { right: 8px; }

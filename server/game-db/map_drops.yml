@@ -1,0 +1,6329 @@
+Header:
+  Type: MAP_DROP_DB
+  Version: 2
+Body:
+  - Map: 06guild_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 06guild_r
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@20cn1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@20cn2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4cdn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4drk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4igd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4inq
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4mag
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4mst
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4sac
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4tro
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@4win
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@adv
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@advs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@air1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@air2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ba_go
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@bamn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@bamq
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@begi
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@cash
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@cata
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ch1a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ch1b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ch_t
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ch_u
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@cor
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@crd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@def01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@def02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@def03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@dime
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@drdo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@dth1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@dth2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@dth3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ecl
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@eom
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ep21a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ep21b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ep21c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exds
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exhn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exnw
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exse
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exsh
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@exsr
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@f_lake
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@face
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ffp
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ge_sn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ge_st
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gef
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gef_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ghg
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_he
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_he2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_k
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_k2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_kh
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gl_prq
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@glast
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gol1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@gol2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@halo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@herbs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@infi
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@iwp
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@jorchs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@jorlab
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@jtb
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@lab
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@lhz
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@lost
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ma_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ma_c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@ma_h
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mcd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@md_gef
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@md_pay
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mdtem
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mir
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mist
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mjo1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@mjo2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@nyd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@nyr
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@odin
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@orcs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@os_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@os_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@oz
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@pdb
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@pop1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@pop2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@pop3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@pump
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@rev
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@rgsr
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@sara
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@slug
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@slw
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@soul
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@spa
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@spa2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@sthb
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@sthc
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@sthd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@swat
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tcamp
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tnm1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tnm2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tnm3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@tre
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@twas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@twbs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@twbs2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@twig
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@twsd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@uns
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrac1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrac2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrcas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrclo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrev
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrgen
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrhha
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrpo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrpop
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@vrsn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@whl
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@wtgs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@xm_d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 1@xm_d2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2009rwc_f01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2012rwc_08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2025arena1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2025arena2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2025arena3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2025arena4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2025arena5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 25ros03_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@cata
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@ch_t
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@exds
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@gl_k
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@gl_k2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@gl_kh
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@mdtem
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@mir
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@nyd
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@nyr
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@orcs
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@pump
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@vrclo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 2@vrpop
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 3@ch_t
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 3@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 3@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 3@vrpop
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 4@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 4@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 5@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 5@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 6@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 6@tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 7@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: 8@thts
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abbey01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abbey02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abbey03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abyss_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abyss_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abyss_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: abyss_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: air_if
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: airplane
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: airplane2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: airplane_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: airport
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alb2trea
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alb_ship
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alberta
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alberta_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_alche
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_tt02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: alde_tt03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeba_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldebaran
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeg_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeg_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeg_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeg_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aldeg_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ama_test
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: amatsu
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: amicitia1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: amicitia2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ant_d02_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: anthell01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: anthell02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arena_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: aru_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: arug_que01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: auction_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: auction_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayo_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ayothaya
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_2whs01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_2whs02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_bath
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_chess
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_go
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_lib
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_lost
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_maison
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_pw01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_pw02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ba_pw03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_a01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_a02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_b01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_b02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_c01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_c02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_c03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bat_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: beach_dun
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: beach_dun2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: beach_dun3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bif_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bif_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_death
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_depth1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_depth2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_grass
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_ice
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_lava
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_soul
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_temple
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bl_venom
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bossnia_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bossnia_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bossnia_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bossnia_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bra_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bra_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bra_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: bra_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: brasilis
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower2_
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower3_
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: c_tower4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cave
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_dw
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_gef_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_geffen
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_gfn01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_gfn03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_que01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_sf01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_sf02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_sf03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_vrgef1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1_vrgef2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1fild1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1zero1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1zero2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1zero3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ch1zero4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: clock_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_bhole
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: cmd_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: com_d02_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: comodo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: conch_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dali
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dali02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dew_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dew_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dew_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dew_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dewata
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dic_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dicastes01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: dicastes02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: e_hugel
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: e_tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_hub01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_in03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_in04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_tdun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_tdun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_tdun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ecl_tdun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: eclage
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_d02_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ein_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: einbech
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: einbroch
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_bomb
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_mobroom
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_swar_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_swar_r
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_swar_s
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: evt_swar_t
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: for_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: for_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_2-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_3-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_3-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_4-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: force_5-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: g_room1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: g_room1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: g_room1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: g_room2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_d01_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_dun00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild13
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_fild14
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gef_tower
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefenia01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefenia02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefenia03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefenia04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: geffen
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: geffen_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefg_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefg_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefg_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefg_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gefg_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_cas01_
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_cas02_
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_church
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_chyard
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_chyard_
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_knt01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_knt02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_prison
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_prison1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_sew01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_sew02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_sew03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_sew04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gl_step
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: glast_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld2_ald
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld2_gef
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld2_pay
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld2_prt
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun01_2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun02_2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun03_2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gld_dun04_2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gon_test
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gonryun
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: grademk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs1-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: guild_vs5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gw_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: gw_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: har_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: harboro1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: harboro2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hem_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hem_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hem_fild
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_dun1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_ent1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_ent2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_ent3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_in1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_in2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_in3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_in4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_lb
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_out1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_out2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_out3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_out4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hero_tra
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: herosria
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: himinn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: httyd_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: httyd_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hu_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: hugel
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: icas_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: icas_in2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ice_d03_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ice_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ice_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ice_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ice_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: icecastle
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_hunter
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_moc_16
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_orcs01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_rogue
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_sphinx1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_sphinx2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_sphinx3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_sphinx4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: in_sphinx5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: int_land
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: int_land01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: int_land02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: int_land03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: int_land04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: itemmall
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac01_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac01_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac01_c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac01_d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac02_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac02_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac02_c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ac02_d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_d04_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_d05_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_dun05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_in_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_in_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_in_c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_in_d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_int
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_int01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_int02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_int03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_int04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: iz_ng01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlu2dun
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude_c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude_d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: izlude_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jalbe_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jawaii
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jawaii_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_arch01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_arch02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_arch03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_gen01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_guil01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_guil02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_guil03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_rang01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_rang02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_rune01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_rune02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_rune03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_sha01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_war01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job3_war02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job4_bio
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job4_mag
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job4_tro
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_cru
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_duncer
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_gun
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_hunte
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_knt
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_ko
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_monk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_prist
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_sage
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_soul
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_star
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_sword1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_thief1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: job_wiz
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_ab01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_ab02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_albe
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_back6
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_base
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_crk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_crk_p
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_maze
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_mbase
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_nest
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_que
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_raise1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_raise2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_root1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_root2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_root3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_safty1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_safty2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_sanct
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_sklf1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_sklf2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_tail
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_tmple1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_tmple2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_twice
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jor_twig
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_area1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_area2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_cave
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_core
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_core2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_ele
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_ele_r
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: jupe_gate
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: juperos_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: juperos_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_kiehl01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_kiehl02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_mansion
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_rossi
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_school
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: kh_vila
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_dun_q
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasa_sea
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lasagna
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_airport
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_cube
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_d_n2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_dun_n
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_in03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lhz_que01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lighthalzen
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: lou_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: louyang
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: luna_sf1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: luna_sf2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_scene01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ma_zif09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mag_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mag_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mag_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mal_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mal_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mal_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: malangdo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: malaya
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: man_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: man_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: man_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: man_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: manuk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mbase_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: memohall
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mid_camp
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mid_campin
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjo_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjo_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjo_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjo_wst01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mjolnir_12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_akhet
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_castle
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild13
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild16
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild17
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild18
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild19
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild20
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild21
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild22
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_fild22b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_para01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_pryd06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_prydb1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_prydn1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_prydn2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moc_ruins
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: monk_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: monk_test
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mora
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moro_cav
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moro_vol
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: morocc
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: morocc_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: moscovia
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_que
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mosk_ship
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: mu_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: n_castle
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nakhyang
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nameless_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nameless_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nameless_n
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_1-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_2-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_2-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_3-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_3-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_3-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_4-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_4-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_4-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_4-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_5-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_5-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_5-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_5-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_event
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_zone01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_zone02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_zone03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: new_zone04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nguild_alde
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nguild_gef
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nguild_pay
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nguild_prt
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nif_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: niflheim
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: niflxmas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nyd_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: nyd_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: odin_past
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: odin_tem01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: odin_tem02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: odin_tem03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: orcsdun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: orcsdun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_3-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_a00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ordeal_a02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: oz_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: oz_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: p_track01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: p_track02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: paramk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_arche
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_d03_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_dun00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pay_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payg_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payg_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payg_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payg_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payg_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payon
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payon_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payon_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: payon_in03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: poring_w01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: poring_w02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pprontera
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prontera
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_are01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_are_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_cas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_cas_q
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_castle
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_church
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_elib
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_evt_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild08a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild08b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild08c
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild08d
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_lib
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_lib_q
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_maze01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_maze02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_maze03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_mk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_monk
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_mz03_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_pri00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_prison
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_q
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_sewb1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_sewb2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_sewb3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prt_sewb4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prtg_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prtg_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prtg_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prtg_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: prtg_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pub_cat
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_2vs2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_c_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_1-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_1-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_2-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_2-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_2-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_3-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_3-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_3-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_3-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_4-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_4-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_4-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_4-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_4-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_5-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_5-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_5-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_5-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_5-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_6-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_6-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_6-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_6-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_6-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_7-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_7-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_7-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_7-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_7-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_8-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_8-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_8-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_8-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_8-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_n_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_1-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_1-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_1-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_1-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_2-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_2-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_2-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_2-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_3-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_3-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_3-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_3-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_4-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_4-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_4-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_4-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_4-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_5-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_5-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_5-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_5-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_5-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_6-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_6-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_6-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_6-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_6-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_7-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_7-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_7-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_7-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_7-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_8-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_8-2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_8-3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_8-4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_8-5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: pvp_y_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_avan01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_ba
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_bingo
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_dan01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_dan02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_god01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_god02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_house_s
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_hugel
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_job01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_job02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_job03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_lhz
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_moc_16
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_moon
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_ng
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qaru01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qaru02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qaru03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qaru04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qaru05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qsch01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qsch02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qsch03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qsch04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_qsch05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_rachel
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_san04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_sign01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_sign02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_swat
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_temsky
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_thor
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: que_thr
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: quiz_00
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: quiz_01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: quiz_02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: quiz_test
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_fild13
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_pol01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_san01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_san02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_san03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_san04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_san05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_temin
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_temple
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ra_temsky
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rachel
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rag_fes
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rag_fes_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rebel_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rgsr_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rockmi1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rockmi2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rockrdg1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: rockrdg2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: s_atelier
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sch_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sch_lab
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_cas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_cas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_cas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_cas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_cas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: schg_que01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sec_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sec_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sec_pri
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: silk_lair
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: slabw01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_cor
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_os
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_rudus
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_rudus2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_rudus3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sp_rudus4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: spl_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: spl_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: spl_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: spl_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: spl_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: splendide
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: star_frst
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: star_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sword_1-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sword_2-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: sword_3-1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: t_garden
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_alde_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_aldecas1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_aldecas2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_aldecas3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_aldecas4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_aldecas5
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prt_gld
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prtcas01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prtcas02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prtcas03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prtcas04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: te_prtcas05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: teg_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: teg_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_scene01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tha_t12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thana_boss
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thana_step
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thor_camp
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thor_v01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thor_v02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: thor_v03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tra_fild
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tra_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tra_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tra_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: treasure01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: treasure02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: treasure_n1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: treasure_n2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_d03_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_d04_i
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_d04ia
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_d04ib
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: tur_dun06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_e_16
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_e_4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_e_8
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_n_1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_n_16
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_n_4
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_n_8
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: turbo_room
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: uknw_ruin
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: uknw_ruin2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: um_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: umbala
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: un_bk_q
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: un_bunker
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: un_myst
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: valkyrie
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ve_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: veins
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ver_eju
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ver_tunn
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus02_a
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus02_b
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: verus04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vis_h01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vis_h02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vis_h03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vis_h04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_bob
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_cas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_clo1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_clo2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_gen
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_po
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_pop1
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_pop2
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: vr_pop3
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: wolfvill
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: x_lhz
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: x_prt
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: x_ra
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: xmas
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: xmas_dun01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: xmas_dun02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: xmas_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: xmas_in
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: y_airport
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ygg_edge
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ygg_fruit
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: ygg_roots
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yggdrasil01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild06
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild07
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild08
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild09
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild10
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild11
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_fild12
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_in01
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_in02
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_in03
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_in04
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_in05
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: yuno_pre
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000
+  - Map: z_agit
+    GlobalDrops:
+      - Index: 0
+        Item: community_Pet_Treat
+        Rate: 40000

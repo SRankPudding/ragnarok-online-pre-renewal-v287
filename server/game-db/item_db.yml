@@ -1,0 +1,246 @@
+# Cosmetic definitions from the pinned rAthena Renewal item database.
+Header:
+  Type: ITEM_DB
+  Version: 3
+
+Body:
+  - Id: 25793
+    AegisName: Inventory_Ex
+    Name: Inventory Voucher (+10)
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 25791
+    AegisName: Inventory_Ex_Evt
+    Name: Inventory Voucher (+1)
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 25792
+    AegisName: Inventory_Ex_Dis
+    Name: Inventory Voucher (+100)
+    Type: Etc
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+  - Id: 19529
+    AegisName: C_Angelic_Chain
+    Name: "Costume Angel Wing"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 38
+  - Id: 19566
+    AegisName: C_Samurai_Mask
+    Name: "Costume Samurai Mask"
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    View: 644
+  - Id: 19616
+    AegisName: C_Ear_Of_Black_Cat
+    Name: "Costume Wickebine's Black Cat Ears"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 368
+  - Id: 19618
+    AegisName: C_Mask_Of_Fox
+    Name: "Costume Kitsune Mask"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 153
+  - Id: 19625
+    AegisName: C_Bunny_Band
+    Name: "Costume Bunny Band"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 15
+  - Id: 19649
+    AegisName: C_White_Baby_Cat_Ears
+    Name: "Costume White Baby Cat Ears"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 926
+  - Id: 19718
+    AegisName: C_Gothic_Head_Dress
+    Name: "Costume Gothic Headdress"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 978
+  - Id: 19733
+    AegisName: C_Panda_Cap
+    Name: "Costume Panda Cap"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 115
+  - Id: 19768
+    AegisName: C_Sakura_Coronet
+    Name: "Costume Sakura Coronet"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 645
+  - Id: 19876
+    AegisName: C_Rabbit_Ear_Hat
+    Name: "Costume Bunny Top Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 384
+  - Id: 19879
+    AegisName: C_Black_Bunny_Band
+    Name: "Costume Black Bunny Band"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 267
+  - Id: 19916
+    AegisName: C_Black_Cat_Hat
+    Name: "Costume Black Cat Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1105
+  - Id: 19928
+    AegisName: C_Gothic_Heart_Wing
+    Name: "Costume Gothic Heart Wing"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    View: 1111
+  - Id: 20191
+    AegisName: C_Black_Cat_Ears_Beret
+    Name: "Costume Black Cat Ears Beret"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1071
+  - Id: 20284
+    AegisName: C_Cherry_Blossom_Hat
+    Name: "Costume Sakura Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1330
+  - Id: 20381
+    AegisName: C_Steampunk_Hat
+    Name: "Costume Steampunk Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1406
+  - Id: 20395
+    AegisName: C_Black_Witch_Hat
+    Name: "Costume Black Witch Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1006
+  - Id: 20398
+    AegisName: C_Niflheim_Bunny_Hat
+    Name: "Costume Niffleheim Bunny Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1285
+  - Id: 20462
+    AegisName: C_Cat_Ears_Cape
+    Name: "Costume Cat Ears Cape"
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    View: 1464
+  - Id: 20499
+    AegisName: C_Cat_Ear_Hat
+    Name: "Costume Cat Ears Hat"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 1479
+  - Id: 20762
+    AegisName: C_GreatDevilWing
+    Name: "Costume Great Devil Wings"
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    View: 10
+  - Id: 20764
+    AegisName: C_Fallen_Angel_Wing
+    Name: "Costume Fallen Angel Wing"
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    View: 3
+  - Id: 20765
+    AegisName: C_Archangel_Wing
+    Name: "Costume Archangel Wing"
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    View: 1
+  - Id: 19596
+    AegisName: C_Flying_Angel_J
+    Name: "Costume Flapping Angel Wing"
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    View: 264
+
+  - Id: 49000
+    AegisName: community_Pet_Treat
+    Name: Pet Treat
+    Type: DelayConsume
+    Buy: 0
+    Sell: 0
+    Weight: 1
+    Script: |
+      catchpet 49000,PET_CATCH_UNIVERSAL_ALL;
+

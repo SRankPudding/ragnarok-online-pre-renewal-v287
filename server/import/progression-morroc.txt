@@ -1,0 +1,1788 @@
+// Optional first chapter. Quest state is stored in the existing character quest log.
+function	script	F_communityQuestReward	{
+	getexp getarg(0),getarg(1);
+	mes "Quest complete!";
+	mes "Zeny received: 10,000.";
+	mes "Base EXP award: " + getarg(0) + " | Job EXP award: " + getarg(1) + " (before server rates).";
+	if (getarg(2,0)) {
+		getitem getarg(2),1;
+		mes "Equipment received: " + getitemname(getarg(2)) + ".";
+	}
+	return;
+}
+-	script	communityPetTutorial	-1,{
+	end;
+OnPCLoginEvent:
+	if (checkquest(65008) < 0) setquest 65008;
+	addtimer 2000, strnpcinfo(3)+"::OnCheckPet";
+	end;
+OnCheckPet:
+	if (isbegin_quest(65008) != 1) end;
+	if (getpetinfo(PETINFO_ID) > 0 && checkweight(10013,1)) {
+		completequest 65008;
+		getitem 10013,1;
+		getexp 400,0;
+		dispbottom "How to Get a Pet complete! You received a pet Backpack, Base EXP and 10,000 Zeny.";
+		end;
+	}
+	addtimer 3000, strnpcinfo(3)+"::OnCheckPet";
+	end;
+}
+
+morocc,153,94,4	script	Adventure Guide#sro	85,{
+	mes "[Adventure Guide]";
+	.@hunt = checkquest(65000);
+	.@sample = checkquest(65001);
+	.@report = checkquest(65002);
+	if (.@hunt < 0 && .@sample < 0 && .@report < 0) {
+		if (Class == Job_Novice || Class == Job_Novice_High || BaseLevel < 10) {
+			mes "Finish your first job change and reach Base Level 10. Then I can offer you a guild assignment.";
+			close;
+		}
+		mes "Traders south of Morroc saw Drops moving away from the old road. Find out what scattered them.";
+		if (select("Accept the assignment:Maybe later") != 1) close;
+		setquest 65000;
+		mes "Defeat twelve Drops. The southern field has plenty of them.";
+		mes "<NAVI>Southern Morroc Field<INFO>moc_fild12,159,381,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@hunt >= 0 && .@hunt < 2 && .@sample < 0 && .@report < 0) {
+		if (checkquest(65000,HUNTING) != 2) {
+			mes "Defeat twelve Drops. Check the quest log for your count.";
+			mes "<NAVI>Southern Morroc Field<INFO>moc_fild12,159,381,0,000,0</INFO></NAVI>";
+			close;
+		}
+		.@weapon = 1207;
+		switch (BaseClass) {
+		case Job_Swordman: .@weapon = 1102; break;
+		case Job_Mage: .@weapon = 1601; break;
+		case Job_Archer: .@weapon = 1704; break;
+		case Job_Acolyte: .@weapon = 1504; break;
+		case Job_Merchant: .@weapon = 1301; break;
+		}
+		if (!checkweight(.@weapon,1)) { mes "Make room for your weapon and return."; close; }
+		completequest 65000;
+		callfunc "F_communityQuestReward",140,120,.@weapon;
+		callfunc "F_communityLevelCheckpoint",18,14;
+		next;
+		mes "Good. Bring me four Jellopies so I can compare them with samples from before the disturbance.";
+		if (select("Accept the next assignment:Later") == 1) setquest 65001;
+		close;
+	}
+	if (.@hunt == 2 && .@sample < 0 && .@report < 0) {
+		mes "Bring me four Jellopies for the comparison.";
+		if (select("Accept the assignment:Later") == 1) setquest 65001;
+		close;
+	}
+	if (.@sample >= 0 && .@sample < 2 && .@report < 0) {
+		if (countitem(909) < 4) {
+			mes "Bring four Jellopies. The Drops in the southern field often leave them behind.";
+			close;
+		}
+		delitem 909,4;
+		completequest 65001;
+		setquest 65002;
+		callfunc "F_communityQuestReward",150,130;
+		callfunc "F_communityLevelCheckpoint",22,18;
+		mes "There's black grit in every sample. Tell the town guard to keep the road clear until we know what it is.";
+		mes "<NAVI>Morroc Town Guard<INFO>morocc,146,89,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@report >= 0 && .@report < 2) {
+		mes "The town guard is waiting for your report.";
+		mes "<NAVI>Morroc Town Guard<INFO>morocc,146,89,0,000,0</INFO></NAVI>";
+		close;
+	}
+	.@pyramid = checkquest(65003);
+	if (.@report == 2 && .@pyramid < 0) {
+		mes "The guard traced the black grit to the old pyramid. The stone at its entrance is warm, even at night.";
+		mes "If you're ready, head inside and thin the Familiars and Poporings around the first chamber.";
+		if (select("Investigate the pyramid:Maybe later") != 1) close;
+		setquest 65003;
+		mes "<NAVI>Pyramid entrance<INFO>moc_ruins,54,161,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@pyramid >= 0 && .@pyramid < 2) {
+		if (checkquest(65003,HUNTING) != 2) {
+			mes "Defeat ten Familiars and ten Poporings. Stay on the first floor.";
+			mes "<NAVI>Pyramid entrance<INFO>moc_ruins,54,161,0,000,0</INFO></NAVI>";
+			close;
+		}
+		completequest 65003;
+		callfunc "F_communityQuestReward",240,200;
+		callfunc "F_communityLevelCheckpoint",32,28;
+		mes "The dust caught in their wings matches our samples. Someone has disturbed a seal beneath the pyramid.";
+		close;
+	}
+	if (.@pyramid == 2 && checkquest(65004) < 0) {
+		mes "Payon's watch sent word of the same black grit. Bring my report to their Scout at the Archer Village.";
+		if (select("Take the report:Maybe later") != 1) close;
+		setquest 65004;
+		mes "<NAVI>Payon Scout<INFO>pay_arche,60,123,0,000,0</INFO></NAVI>";
+		close;
+	}
+	mes "The guard has your report. Thank you for keeping the southern road safe.";
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(65001) == 1 || (isbegin_quest(65000) == 1 && checkquest(65000,HUNTING) == 2) || (isbegin_quest(65003) == 1 && checkquest(65003,HUNTING) == 2)");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "(Class != Job_Novice && Class != Job_Novice_High && BaseLevel >= 10 && isbegin_quest(65000) == 0) || (isbegin_quest(65002) == 2 && isbegin_quest(65003) == 0) || (isbegin_quest(65003) == 2 && isbegin_quest(65004) == 0)");
+	end;
+}
+
+pay_arche,60,123,4	script	Payon Scout#sro	105,{
+	mes "[Payon Scout]";
+	.@letter = checkquest(65004);
+	.@hunt = checkquest(65005);
+	if (.@letter == 0 || .@letter == 1) {
+		completequest 65004;
+		callfunc "F_communityQuestReward",120,115;
+		callfunc "F_communityLevelCheckpoint",35,30;
+		mes "The bell below Payon used to ring at dawn. This week it rang at midnight, and the first chamber filled with walking dead.";
+		close;
+	}
+	if (.@letter == 2 && .@hunt < 0) {
+		mes "Clear ten Zombies and ten Skeletons so the village watch can reach the bell.";
+		if (select("Investigate Payon Cave:Maybe later") != 1) close;
+		setquest 65005;
+		mes "<NAVI>Payon Cave<INFO>pay_arche,36,131,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if ((.@hunt == 0 || .@hunt == 1) && checkquest(65005,HUNTING) == 2) {
+		completequest 65005;
+		callfunc "F_communityQuestReward",320,270;
+		callfunc "F_communityLevelCheckpoint",40,34;
+		mes "The watch found a chip from the bell's stone mounting. The grooves match the sketch from Morroc. Take both to the Geffen Archivist.";
+		setquest 65006;
+		mes "<NAVI>Geffen Archivist<INFO>geffen,120,108,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@hunt == 2 && checkquest(65006) < 0) {
+		mes "The Geffen Archivist is waiting for the watch's report.";
+		if (select("Take the report:Maybe later") != 1) close;
+		setquest 65006;
+		mes "<NAVI>Geffen Archivist<INFO>geffen,120,108,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@hunt == 0 || .@hunt == 1)
+		mes "ten Zombies and ten Skeletons. Return here when the watch can reach the chamber.";
+	else
+		mes "Keep to the village paths. The cave watch is on duty.";
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(65004) == 1 || (isbegin_quest(65005) == 1 && checkquest(65005,HUNTING) == 2)");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "(isbegin_quest(65004) == 2 && isbegin_quest(65005) == 0) || (isbegin_quest(65005) == 2 && isbegin_quest(65006) == 0)");
+	end;
+}
+
+geffen,120,108,4	script	Geffen Archivist#sro	97,{
+	mes "[Geffen Archivist]";
+	.@report = checkquest(65006);
+	.@hunt = checkquest(65007);
+	if (.@report == 0 || .@report == 1) {
+		completequest 65006;
+		callfunc "F_communityQuestReward",150,140;
+		callfunc "F_communityLevelCheckpoint",44,37;
+		mes "These grooves match the old ward beneath our tower. Three cities, one pattern. Someone may be testing where the wards are weakest.";
+		close;
+	}
+	if (.@report == 2 && .@hunt < 0) {
+		if (BaseLevel < 35) {
+			mes "Return at Base Level 35. The Hunter Flies below the tower are quick and dangerous.";
+			close;
+		}
+		mes "Clear twelve Poison Spores so my apprentices can reach the old ward. Watch out for Hunter Flies.";
+		if (select("Help the apprentices:Maybe later") != 1) close;
+		setquest 65007;
+		mes "<NAVI>Geffen Dungeon entrance<INFO>gef_tower,153,28,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@hunt == 0 || .@hunt == 1) {
+		if (checkquest(65007,HUNTING) != 2) {
+			mes "Clear twelve Poison Spores. Keep an eye out for Hunter Flies.";
+			close;
+		}
+		completequest 65007;
+		callfunc "F_communityQuestReward",430,360;
+		callfunc "F_communityLevelCheckpoint",50,40;
+		mes "The ward was scratched from the inside. Whatever is moving through these old chambers knows how to avoid the roads.";
+		close;
+	}
+	.@hills = checkquest(65009);
+	if (.@hunt == 2 && .@hills < 0) {
+		mes "The scratches contain silk from Mount Mjolnir. Travel north from Geffen, then follow the hills east. Clear ten Mantises and ten Argos while I compare the silk.";
+		if (select("Take the hill assignment:Later") != 1) close;
+		setquest 65009;
+		mes "<NAVI>Mount Mjolnir<INFO>mjolnir_03,24,258,0,000,0</INFO></NAVI>";
+		close;
+	}
+	if (.@hills == 0 || .@hills == 1) {
+		if (checkquest(65009,HUNTING) != 2) { mes "Return after defeating ten Mantises and ten Argos."; close; }
+		if (!checkweight(2309,1)) { mes "Make room for the reward and return."; close; }
+		completequest 65009;
+		callfunc "F_communityQuestReward",550,470,2309;
+		mes "The web contains metal filings. Our trail leads away from the old wards and toward a workshop.";
+		close;
+	}
+	mes "I'm comparing the reports from Morroc and Payon with our records.";
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(65006) == 1 || (isbegin_quest(65007) == 1 && checkquest(65007,HUNTING) == 2) || (isbegin_quest(65009) == 1 && checkquest(65009,HUNTING) == 2)");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "(isbegin_quest(65006) == 2 && isbegin_quest(65007) == 0 && BaseLevel >= 35) || (isbegin_quest(65007) == 2 && isbegin_quest(65009) == 0)");
+	end;
+}
+
+morocc,146,89,4	script	Town Guard#sro	105,{
+	mes "[Morroc Town Guard]";
+	mes "Welcome to Morroc. What are you looking for?";
+	.@choice = select("Kafra Service:Weapons:Armor:Inn:Thief Guild:Pyramid entrance:Southern hunting field:Report to the guard:Cancel");
+	switch (.@choice) {
+	case 1: mes "<NAVI>Kafra Service<INFO>morocc,165,99,0,000,0</INFO></NAVI>"; break;
+	case 2: mes "<NAVI>Weapon Dealer<INFO>morocc_in,141,67,0,000,0</INFO></NAVI>"; break;
+	case 3: mes "<NAVI>Armor Dealer<INFO>morocc_in,141,60,0,000,0</INFO></NAVI>"; break;
+	case 4: mes "<NAVI>Inn Employee<INFO>morocc_in,147,141,0,000,0</INFO></NAVI>"; break;
+	case 5: mes "<NAVI>Thief Guide<INFO>moc_prydb1,39,129,0,000,0</INFO></NAVI>"; break;
+	case 6: mes "<NAVI>Pyramid entrance<INFO>moc_ruins,54,161,0,000,0</INFO></NAVI>"; break;
+	case 7:
+		mes "The southern field has Drops, Picky and Peco Peco Eggs. It's a good place to practice on easy targets.";
+		mes "<NAVI>Southern Morroc Field<INFO>moc_fild12,159,381,0,000,0</INFO></NAVI>";
+		break;
+	case 8:
+		.@state = checkquest(65002);
+		if (.@state < 0 || .@state == 2) {
+			mes "I don't need a new report right now. Ask the Adventure Guide for work.";
+			mes "<NAVI>Adventure Guide<INFO>morocc,153,94,0,000,0</INFO></NAVI>";
+			break;
+		}
+		completequest 65002;
+		callfunc "F_communityQuestReward",100,100;
+		callfunc "F_communityLevelCheckpoint",25,22;
+		mes "I will warn the traders. Thank you for your work.";
+		break;
+	}
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "isbegin_quest(65002) == 1");
+	end;
+}
+
+// Independent city chapter. Append to the custom NPC import with quest IDs 65010–65011.
+prontera,146,91,4	script	Capital Watch#sro	105,{
+	mes "[Capital Watch]";
+	.@patrol = checkquest(65010);
+	.@culvert = checkquest(65011);
+	if (.@patrol < 0) {
+		if (BaseClass == Job_Novice || BaseLevel < 10) {
+			mes "Return after your first job change and Base Level 10.";
+			close;
+		}
+		mes "The Porings and Lunatics have scattered across the south road. Clear a path so we can reach the culvert patrol.";
+		if (select("Patrol the south road:Later") == 1) setquest 65010;
+		close;
+	}
+	if (.@patrol < 2) {
+		if (checkquest(65010,HUNTING) != 2) {
+			mes "Defeat twelve Porings and ten Lunatics in the field outside the south gate.";
+			mes "<NAVI>South Gate<INFO>prontera,156,22,0,000,0</INFO></NAVI>";
+			close;
+		}
+		completequest 65010;
+		callfunc "F_communityQuestReward",150,135;
+		next;
+	}
+	if (.@culvert < 0) {
+		mes "The patrol found black grit in the culvert. Enter through the Culvert Guide west of Prontera. If you need access, ask the Chivalry in the northwest of town.";
+		if (select("Investigate the culvert:Later") == 1) setquest 65011;
+		close;
+	}
+	if (.@culvert < 2) {
+		if (checkquest(65011,HUNTING) != 2) {
+			mes "Defeat twelve Thief Bugs and ten Tarous, then report back here.";
+			close;
+		}
+		completequest 65011;
+		callfunc "F_communityQuestReward",250,230;
+		mes "The grit is the same as the residue reported in Morroc. I'll add our findings to the guild's city records.";
+		close;
+	}
+	mes "The south road and culvert patrol are back on duty.";
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2, QMARK_YELLOW, "(isbegin_quest(65010) == 1 && checkquest(65010,HUNTING) == 2) || (isbegin_quest(65011) == 1 && checkquest(65011,HUNTING) == 2)");
+	questinfo(QTYPE_QUEST, QMARK_YELLOW, "(BaseClass != Job_Novice && BaseLevel >= 10 && isbegin_quest(65010) == 0) || (isbegin_quest(65010) == 2 && isbegin_quest(65011) == 0)");
+	end;
+}
+
+// The two harbor assignments are independent of the other city chapters.
+function	script	F_communityHarbor	{
+	.@quest = getarg(0);
+	.@state = checkquest(.@quest);
+	mes "[" + getarg(1) + "]";
+	if (.@state < 0) {
+		if (BaseClass == Job_Novice || BaseLevel < 10) {
+			mes "Return after your first job change and Base Level 10.";
+			close;
+		}
+		mes getarg(2);
+		mes "The first chamber contains stronger monsters than the fields. Bring healing items, fight one enemy at a time, and consider a shield if your class can use one.";
+		mes "For gear and refining advice, visit the Equipment Mentor in Prontera.";
+		if (select("Accept the assignment:Later") != 1) close;
+		setquest .@quest;
+	}
+	if (.@state == 2) {
+		mes "Your report is already in the harbor ledger.";
+		close;
+	}
+	if (checkquest(.@quest,HUNTING) != 2) {
+		mes getarg(3);
+		close;
+	}
+	if (!checkweight(504,10)) {
+		mes "Make room for the ten White Potions in your reward.";
+		close;
+	}
+	completequest .@quest;
+	callfunc "F_communityQuestReward",550,650;
+	getitem 504,10;
+	mes "Supplies received: 10 White Potions.";
+	mes "I will send your findings to the guild. Thank you for keeping the sea route open.";
+	close;
+}
+
+prontera,146,94,4	script	Equipment Mentor#sro	85,{
+	mes "[Equipment Mentor]";
+	if (BaseClass == Job_Novice || BaseLevel < 20) {
+		mes "Come back after your first job change and Base Level 20.";
+		close;
+	}
+	mes "A better weapon helps you finish fights sooner. A one-handed weapon and shield can make a crowded dungeon easier to survive. Carry healing supplies.";
+	mes "Refining can improve a weapon or armor you already own. Ask Hollgrehenn at the Prontera forge about the ore, fee and safe refinement limit for your item.";
+	mes "<NAVI>Hollgrehenn<INFO>prt_in,63,60,0,000,0</INFO></NAVI>";
+	next;
+	mes "Your second job normally becomes available at Job Level 40. You can also keep training toward Job Level 50 for more first-job skill points. Check Class Guides for your trainer.";
+	if (checkquest(65014) == 2) close;
+	if (select("Finish the preparation briefing:Later") != 1) close;
+	if (!checkweight(504,15)) {
+		mes "Make room for fifteen White Potions and return.";
+		close;
+	}
+	if (checkquest(65014) < 0) setquest 65014;
+	completequest 65014;
+	callfunc "F_communityQuestReward",500,650;
+	getitem 504,15;
+	mes "Supplies received: 15 White Potions.";
+	close;
+}
+
+izlude,138,114,4	script	Byalan Surveyor#sro	85,{
+	callfunc "F_communityHarbor",65012,"Byalan Surveyor","A current beneath Byalan is carrying black grit into the harbor. Help me clear the first chamber so we can follow it.","Take the Byalan ferry and defeat twelve Plankton and ten Marina. Return here afterward.";
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST2,QMARK_YELLOW,"isbegin_quest(65012) == 1 && checkquest(65012,HUNTING) == 2");
+	questinfo(QTYPE_QUEST,QMARK_YELLOW,"BaseClass != Job_Novice && BaseLevel >= 10 && isbegin_quest(65012) == 0");
+	end;
+}
+
+alberta,117,65,4	script	Harbor Quartermaster#sro	105,{
+	callfunc "F_communityHarbor",65013,"Harbor Quartermaster","A recovered crate bears the same seal sketched in the guild's reports. The rest of the cargo is still inside the wreck.","Take the boat to the Sunken Ship and defeat ten Kukre and ten Pirate Skeletons. Return here with your report.";
+	end;
+OnInit:
+	questinfo(QTYPE_QUEST2,QMARK_YELLOW,"isbegin_quest(65013) == 1 && checkquest(65013,HUNTING) == 2");
+	questinfo(QTYPE_QUEST,QMARK_YELLOW,"BaseClass != Job_Novice && BaseLevel >= 10 && isbegin_quest(65013) == 0");
+	end;
+}
+
+-	script	communityMonsterZeny	-1,{
+	end;
+OnNPCKillEvent:
+	Zeny += 100;
+	.@level = getmonsterinfo(killedrid,MOB_LV);
+	if (.@level < 1 || getmapxy(.@map$,.@x,.@y,BL_PC)) end;
+	.@tier = .@level < 20 ? 0 : .@level < 40 ? 1 : 2;
+	if (rand(100) < 20)
+		makeitem .Weapon[.@tier*8+rand(8)],1,.@map$,.@x,.@y;
+	if (rand(100) < 20)
+		makeitem .Armor[.@tier*8+rand(8)],1,.@map$,.@x,.@y;
+	if (rand(100) < 18)
+		makeitem .Materials[rand(getarraysize(.Materials))],1,.@map$,.@x,.@y;
+	end;
+OnInit:
+	setarray .Weapon[0],1104,1207,1301,1504,1604,1707,13102,1907,
+		1110,1216,1354,1507,1604,1710,13152,1907,
+		1160,1222,1360,1522,1620,1714,13152,13304;
+	setarray .Armor[0],2309,2403,2504,2103,2228,2309,2403,2504,
+		2314,2405,2504,2103,2228,2314,2405,2506,
+		2319,2405,2506,2103,2228,2613,2614,2314;
+	setarray .Materials[0],756,757,984,985,998,999,1002,1003,1010,1011;
+	end;
+}
+
+prontera,165,63,4	script	Enchanting Instructor#sro	85,{
+	mes "[Enchanting Instructor]";
+	if (checkquest(65015) == 2) {
+		mes "Use Enchantment or visit the Apprentice Craftsman just south of here.";
+		close;
+	}
+	if (BaseLevel < 40) {
+		mes "Return at Base Level 40 to learn about gear enchanting.";
+		close;
+	}
+	mes "Enchanting can add a stat bonus to eligible gear. Refinement raises the item's + value, and card slots are used to insert monster cards.";
+	if (checkquest(65015) < 0) {
+		if (select("Learn about gear enchanting:Later") != 1) close;
+		setquest 65015;
+	}
+	next;
+	mes "[Enchanting Instructor]";
+	mes "Open Enchantment or visit the Apprentice Craftsman at Prontera (165,60). Pick a piece of gear and a stat. +1 through +4 always succeed. From +5, attempts can fail and cost Zeny. Your current bonus stays intact.";
+	mes "<NAVI>Apprentice Craftsman<INFO>prontera,165,60,0,000,0</INFO></NAVI>";
+	next;
+	mes "[Enchanting Instructor]";
+	mes "What do you need to enchant an eligible gear?";
+	if (select("Only Zeny:Ore and monster cards") != 1) {
+		mes "Only Zeny is required. Your cards and refine level stay intact.";
+		close;
+	}
+	completequest 65015;
+	callfunc "F_communityQuestReward",400,400;
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST,QMARK_YELLOW,"BaseLevel >= 40 && isbegin_quest(65015) == 0");
+	end;
+}
+
+prontera,165,60,2	script	Apprentice Craftsman#sro	73,{
+OnEnchant:
+	mes "[Enchantment]";
+	mes "Open Enchantment in your client and drop in an identified, unequipped weapon or piece of gear. Choose one stat and upgrade it up to +10.";
+	mes "From +5, upgrades can fail. A failed attempt costs Zeny and preserves your current enchantment.";
+	close;
+OnInit:
+	disablenpc "Apprentice Craftsman";
+	bindatcmd "enchantment", strnpcinfo(3) + "::OnEnchant", 0, 100;
+	bindatcmd "sroenchantui", strnpcinfo(3) + "::OnUpgrade", 0, 100;
+	end;
+OnUpgrade:
+	if (.@atcmd_numparameters != 4) end;
+	if (@sro_enchant_next > gettimetick(0)) end;
+	@sro_enchant_next = gettimetick(0) + 450;
+	.@result = sroenchant(atoi(.@atcmd_parameters$[0])-2,atoi(.@atcmd_parameters$[1]),
+		atoi(.@atcmd_parameters$[2]),atoi(.@atcmd_parameters$[3]));
+	if (.@result == -2) dispbottom "Enchantment: Not enough Zeny.";
+	if (.@result == -1) dispbottom "Enchantment: This item is no longer eligible or has no room for the enchant record.";
+	if (.@result == -3) dispbottom "Enchantment failed. Your item and enchant level are unchanged.";
+	end;
+}
+
+-	script	communityStarterStats	-1,{
+	end;
+OnPCLoginEvent:
+	if (checkquest(65016) < 0) setquest 65016;
+	end;
+}
+
+function	script	F_communityLevelCheckpoint	{
+	.@base = getarg(0);
+	.@job = getarg(1);
+	.@job = (Class >= Job_Swordman && Class <= Job_Thief) ? .@job : 0;
+	if (BaseLevel >= .@base && JobLevel >= .@job) return;
+	sroprogressfloor .@base,.@job;
+	mes "Training checkpoint reached: Base Level " + BaseLevel + ", Job Level " + JobLevel + ".";
+	return;
+}
+
+-	script	communityLevel50Guide	-1,{
+	end;
+OnPCLoginEvent:
+	if (checkquest(65007) == 2 && (BaseLevel < 50 || (Class >= Job_Swordman && Class <= Job_Thief && JobLevel < 40)))
+		sroprogressfloor 50,(Class >= Job_Swordman && Class <= Job_Thief) ? 40 : 0;
+OnPCBaseLvUpEvent:
+OnPCJobLvUpEvent:
+OnPCJobChangeEvent:
+	if (BaseLevel >= 50 && checkquest(65017) < 0) setquest 65017;
+	doevent "communityWorldJourney::OnCheck";
+	end;
+}
+
+prontera,148,95,4	script	Progression Mentor#sro	85,{
+	mes "[Progression Mentor]";
+	if (BaseLevel < 50) {
+		mes "Come back at Base Level 50. The Morroc, Payon and Geffen assignments will get you ready.";
+		close;
+	}
+	if (checkquest(65017) < 0) setquest 65017;
+	switch (Class) {
+		case Job_Swordman: mes "As a Swordman, choose Knight for melee damage or Crusader for defense and group protection."; break;
+		case Job_Acolyte: mes "As an Acolyte, choose Priest for healing and buffs or Monk for martial arts."; break;
+		case Job_Archer: mes "As an Archer, choose Hunter for bow combat and traps, or the performance path: Bard for men, Dancer for women."; break;
+		case Job_Mage: mes "As a Mage, choose Wizard for elemental damage or Sage for magic utility and support."; break;
+		case Job_Merchant: mes "As a Merchant, choose Blacksmith for weapons and melee or Alchemist for potions and summons."; break;
+		case Job_Thief: mes "As a Thief, choose Assassin for daggers and katars or Rogue for copying skills and flexible builds."; break;
+		default: mes "Open Class Guides and use Class Paths to check the branches available to your class."; break;
+	}
+	mes "Regular first jobs can change at Job Level 40. Wait until Job Level 50 for ten more skill points. Open Class Guides > Second jobs for the NPC route. The first change keeps Base Level and starts your new job at Job Level 1.";
+	next;
+	mes "[Progression Mentor]";
+	mes "Regular second jobs can rebirth in Juno at Base Level 99 and Job Level 50. Spend all skill points and check the Rebirth tab before traveling.";
+	mes "You restart as High Novice, return to your High first job, then follow the transcendent version of the second job you chose. That job can reach Job Level 70. The Endgame tab covers what to do next.";
+	next;
+	mes "[Progression Mentor]";
+	mes "Use the Dungeon Codex or return to the Geffen Archivist for Mount Mjolnir. Bring healing supplies, choose a weapon for your build, and use cards or Enchantment to improve your gear.";
+	mes "Pick up smithing materials as you explore. Crafting lists recipes, Zeny fees and materials you already carry.";
+	if (checkquest(65017) == 2) close;
+	if (select("Finish the briefing:Later") != 1) close;
+	completequest 65017;
+	callfunc "F_communityQuestReward",1200,900;
+	callfunc "F_communityLevelCheckpoint",52,40;
+	doevent "communityWorldJourney::OnCheck";
+	close;
+OnInit:
+	questinfo(QTYPE_QUEST2,QMARK_YELLOW,"BaseLevel >= 50 && isbegin_quest(65017) == 1");
+	end;
+}
+
+-	script	communityWorldJourney	-1,{
+	end;
+
+OnInit:
+	setarray .Level[0],50,55,65,75,85,92;
+	setarray .BaseExp[0],1200,2200,4200,7500,14000,26000;
+	setarray .JobExp[0],900,1400,2500,4500,7500,13000;
+	end;
+
+OnCheck:
+	if (checkquest(65017) != 2) end;
+	if (checkquest(65018) < 0) {
+		setquest 65018;
+		dispbottom "Choose Your Second Job: Open Class Guides > Second jobs for the NPC route.";
+	}
+	if (isbegin_quest(65018) == 1) {
+		deltimer strnpcinfo(3)+"::OnCheck";
+		if (BaseJob < Job_Knight || BaseJob > Job_Crusader2) {
+			addtimer 3000,strnpcinfo(3)+"::OnCheck";
+			end;
+		}
+		completequest 65018;
+		getexp 1800,1200;
+		Zeny += 10000;
+		dispbottom "Choose Your Second Job complete. You received Base EXP, Job EXP and 10,000 Zeny.";
+	}
+	if (checkquest(65018) == 2 && BaseJob >= Job_Knight && BaseJob <= Job_Crusader2)
+		callsub S_CheckHunt;
+	else
+		@sro_world_hunt = 0;
+	end;
+
+OnNPCKillEvent:
+	if (!@sro_world_hunt) end;
+	if (checkquest(@sro_world_hunt,HUNTING) != 2) end;
+	callsub S_CheckHunt;
+	end;
+
+S_CheckHunt:
+	@sro_world_hunt = 0;
+	for (.@i = 0; .@i < getarraysize(.Level); .@i++) {
+		.@id = 65019 + .@i;
+		if (checkquest(.@id) == 2) continue;
+		if (BaseLevel < .Level[.@i]) return;
+		if (checkquest(.@id) < 0) {
+			setquest .@id;
+			dispbottom "World Journey: A new expedition is in your quest log.";
+		}
+		if (checkquest(.@id,HUNTING) != 2) {
+			@sro_world_hunt = .@id;
+			return;
+		}
+		completequest .@id;
+		getexp .BaseExp[.@i],.JobExp[.@i];
+		Zeny += 10000;
+		dispbottom "World Journey expedition complete. You received Base EXP, Job EXP and 10,000 Zeny.";
+		if (.@id == 65024)
+			dispbottom "World Journey complete. At Base 99 and Job 50, check Class Guides > Rebirth for Juno.";
+	}
+	return;
+}
+
+-	script	communityCrafting	-1,{
+	end;
+OnInit:
+	bindatcmd "crafting",strnpcinfo(3)+"::OnCraft",0,100;
+	bindatcmd "srocraft",strnpcinfo(3)+"::OnDirect",0,100;
+	bindatcmd "srorepair",strnpcinfo(3)+"::OnRepair",0,100;
+	bindatcmd "srorefine",strnpcinfo(3)+"::OnRefine",0,100;
+	setarray .Categories$[0],"Weapons","Metals and refinement ores","Potions and mixtures","Cooking","Elemental converters";
+	donpcevent "communityCraftingRecipes::OnRegister";
+	end;
+
+OnRepair:
+	if (.@atcmd_numparameters) end;
+	.@broken = 0;
+	while (getbrokenid(.@broken + 1)) .@broken++;
+	if (!.@broken) {
+		dispbottom "Repair: No damaged equipment. You were not charged.";
+		end;
+	}
+	.@total = .@broken * 5000;
+	if (Zeny < .@total) {
+		dispbottom "Repair: You need " + .@total + " Zeny to repair all " + .@broken + " damaged item(s).";
+		end;
+	}
+	repairall;
+	Zeny -= .@total;
+	dispbottom "Repair: Repaired " + .@broken + " item(s) for " + .@total + " Zeny.";
+	end;
+
+OnRefine:
+	if (.@atcmd_numparameters) end;
+	callsub S_OpenRefine;
+	end;
+
+// Direct crafting for the client's crafting station: "@srocraft <recipe index>", no dialogue.
+// Answers with "Crafting: ..." lines; the client reads them and watches the inventory.
+OnDirect:
+	if (.@atcmd_numparameters != 1) end;
+	if (@sro_craft_next > gettimetick(0)) end;
+	@sro_craft_next = gettimetick(0) + 300;
+	.@recipe = atoi(.@atcmd_parameters$[0]);
+	if (.@atcmd_parameters$[0] != "" + .@recipe || .@recipe < 0 || .@recipe >= getarraysize($@sro_craft_id)) end;
+	.@id = $@sro_craft_id[.@recipe];
+	.@fee = $@sro_craft_fee[.@recipe];
+	.@offset = $@sro_craft_offset[.@recipe];
+	.@length = $@sro_craft_size[.@recipe];
+	if (Zeny < .@fee) { dispbottom "Crafting: Not enough Zeny."; end; }
+	if (!checkweight(.@id,1)) { dispbottom "Crafting: Make room in your inventory first."; end; }
+	for (.@i = .@offset; .@i < .@offset + .@length; .@i++) {
+		if (countitem($@sro_mat_id[.@i]) < max(1,$@sro_mat_amount[.@i])) {
+			dispbottom "Crafting: You do not have all the ingredients.";
+			end;
+		}
+	}
+	for (.@i = .@offset; .@i < .@offset + .@length; .@i++) {
+		if ($@sro_mat_amount[.@i] > 0) delitem $@sro_mat_id[.@i],$@sro_mat_amount[.@i];
+	}
+	Zeny -= .@fee;
+	getitem .@id,1;
+	dispbottom "Crafting: Made " + getitemname(.@id) + ".";
+	end;
+
+OnCraft:
+	mes "[Crafting]";
+	mes "Choose a category or read the Crafting Guide.";
+	.@category = select("Weapons:Metals and refinement ores:Potions and mixtures:Cooking:Elemental converters:Crafting Guide:Refine equipment:Repair equipment:Close") - 1;
+	if (.@category == 8) close;
+	if (.@category == 6) {
+		mes "Refinement uses the normal forge fees, materials and failure rules. Check the safe limit for your equipment before confirming.";
+		if (select("Open Refinement:Cancel") != 1) close;
+		if (getbattleflag("feature.refineui")) close2;
+		else next;
+		callsub S_OpenRefine;
+		end;
+	}
+	if (.@category == 7) {
+		next;
+		callfunc "repairmain","Crafting";
+		end;
+	}
+	if (.@category == 5) {
+		mes "[Crafting Guide]";
+		mes "Defeat monsters for equipment, ores and other materials. Dungeon monsters can drop iron ore, coal, rough Oridecon and rough Elunium.";
+		mes "Open a recipe to see the fee and how much of each material you own. Some recipes require a guide or tool, which stays in your inventory.";
+		mes "Crafting here produces the selected item at a fixed Zeny and material cost. Use Enchantment to add a stat to existing gear.";
+		close;
+	}
+	.@page = 0;
+	while (1) {
+		.@menu$ = "";
+		.@shown = 0;
+		.@matched = 0;
+		.@more = 0;
+		for (.@i = 0; .@i < getarraysize($@sro_craft_id); .@i++) {
+			if ($@sro_craft_cat[.@i] != .@category) continue;
+			if (.@matched++ < .@page*10) continue;
+			if (.@shown == 10) { .@more = 1; break; }
+			.@indices[.@shown++] = .@i;
+			.@menu$ += replacestr(getitemname($@sro_craft_id[.@i]),":"," ") + ":";
+		}
+		if (!.@shown) { mes "No recipes in this category."; close; }
+		mes .Categories$[.@category] + " — Page " + (.@page+1);
+		if (.@page > 0) .@menu$ += "Previous page:";
+		if (.@more) .@menu$ += "Next page:";
+		.@choice = select(.@menu$ + "Close") - 1;
+		if (.@choice < .@shown) break;
+		if (.@page > 0 && .@choice == .@shown) { .@page--; next; continue; }
+		if (.@more && .@choice == .@shown + (.@page > 0)) { .@page++; next; continue; }
+		close;
+	}
+	.@recipe = .@indices[.@choice];
+	.@id = $@sro_craft_id[.@recipe];
+	.@fee = $@sro_craft_fee[.@recipe];
+	.@offset = $@sro_craft_offset[.@recipe];
+	.@length = $@sro_craft_size[.@recipe];
+	next;
+	mes "[Crafting]";
+	mes getitemname(.@id) + " — " + .@fee + " Zeny";
+	for (.@i = .@offset; .@i < .@offset + .@length; .@i++) {
+		.@required = $@sro_mat_amount[.@i];
+		.@material = $@sro_mat_id[.@i];
+		mes getitemname(.@material) + " (" + countitem(.@material) + "/" + max(1,.@required) + ")" + (.@required ? "" : " — kept");
+	}
+	if (select("Craft one:Cancel") != 1) close;
+	if (Zeny < .@fee) { mes "You do not have enough Zeny."; close; }
+	if (!checkweight(.@id,1)) { mes "Make room in your inventory first."; close; }
+	for (.@i = .@offset; .@i < .@offset + .@length; .@i++) {
+		if (countitem($@sro_mat_id[.@i]) < max(1,$@sro_mat_amount[.@i])) {
+			mes "You do not have all the ingredients.";
+			close;
+		}
+	}
+	for (.@i = .@offset; .@i < .@offset + .@length; .@i++) {
+		if ($@sro_mat_amount[.@i] > 0) delitem $@sro_mat_id[.@i],$@sro_mat_amount[.@i];
+	}
+	Zeny -= .@fee;
+	getitem .@id,1;
+	mes "Crafted " + getitemname(.@id) + ".";
+	close;
+
+S_OpenRefine:
+	if (getbattleflag("feature.refineui")) {
+		refineui();
+		return;
+	}
+	callfunc "refinemain","Crafting",0;
+	return;
+}
+
+-	script	communityCraftingRecipes	-1,{
+	end;
+OnRegister:
+	$@sro_craft_id[0] = 1101;
+	$@sro_craft_cat[0] = 0;
+	$@sro_craft_fee[0] = 1500;
+	$@sro_craft_offset[0] = 0;
+	$@sro_craft_size[0] = 1;
+	setarray $@sro_mat_id[0],998;
+	setarray $@sro_mat_amount[0],2;
+	$@sro_craft_id[1] = 1104;
+	$@sro_craft_cat[1] = 0;
+	$@sro_craft_fee[1] = 1500;
+	$@sro_craft_offset[1] = 1;
+	$@sro_craft_size[1] = 1;
+	setarray $@sro_mat_id[1],998;
+	setarray $@sro_mat_amount[1],30;
+	$@sro_craft_id[2] = 1107;
+	$@sro_craft_cat[2] = 0;
+	$@sro_craft_fee[2] = 1500;
+	$@sro_craft_offset[2] = 2;
+	$@sro_craft_size[2] = 2;
+	setarray $@sro_mat_id[2],998,913;
+	setarray $@sro_mat_amount[2],45,25;
+	$@sro_craft_id[3] = 1110;
+	$@sro_craft_cat[3] = 0;
+	$@sro_craft_fee[3] = 3000;
+	$@sro_craft_offset[3] = 4;
+	$@sro_craft_size[3] = 1;
+	setarray $@sro_mat_id[4],999;
+	setarray $@sro_mat_amount[4],20;
+	$@sro_craft_id[4] = 1113;
+	$@sro_craft_cat[4] = 0;
+	$@sro_craft_fee[4] = 3000;
+	$@sro_craft_offset[4] = 5;
+	$@sro_craft_size[4] = 1;
+	setarray $@sro_mat_id[5],999;
+	setarray $@sro_mat_amount[5],35;
+	$@sro_craft_id[5] = 1122;
+	$@sro_craft_cat[5] = 0;
+	$@sro_craft_fee[5] = 3000;
+	$@sro_craft_offset[5] = 6;
+	$@sro_craft_size[5] = 2;
+	setarray $@sro_mat_id[6],999,920;
+	setarray $@sro_mat_amount[6],40,50;
+	$@sro_craft_id[6] = 1126;
+	$@sro_craft_cat[6] = 0;
+	$@sro_craft_fee[6] = 4500;
+	$@sro_craft_offset[6] = 8;
+	$@sro_craft_size[6] = 3;
+	setarray $@sro_mat_id[8],999,984,727;
+	setarray $@sro_mat_amount[8],5,8,1;
+	$@sro_craft_id[7] = 1123;
+	$@sro_craft_cat[7] = 0;
+	$@sro_craft_fee[7] = 4500;
+	$@sro_craft_offset[7] = 11;
+	$@sro_craft_size[7] = 3;
+	setarray $@sro_mat_id[11],984,999,728;
+	setarray $@sro_mat_amount[11],8,10,1;
+	$@sro_craft_id[8] = 1119;
+	$@sro_craft_cat[8] = 0;
+	$@sro_craft_fee[8] = 4500;
+	$@sro_craft_offset[8] = 14;
+	$@sro_craft_size[8] = 3;
+	setarray $@sro_mat_id[14],984,999,718;
+	setarray $@sro_mat_amount[14],8,15,1;
+	$@sro_craft_id[9] = 1129;
+	$@sro_craft_cat[9] = 0;
+	$@sro_craft_fee[9] = 4500;
+	$@sro_craft_offset[9] = 17;
+	$@sro_craft_size[9] = 2;
+	setarray $@sro_mat_id[17],984,724;
+	setarray $@sro_mat_amount[17],16,1;
+	$@sro_craft_id[10] = 1201;
+	$@sro_craft_cat[10] = 0;
+	$@sro_craft_fee[10] = 1500;
+	$@sro_craft_offset[10] = 19;
+	$@sro_craft_size[10] = 2;
+	setarray $@sro_mat_id[19],998,909;
+	setarray $@sro_mat_amount[19],1,10;
+	$@sro_craft_id[11] = 1204;
+	$@sro_craft_cat[11] = 0;
+	$@sro_craft_fee[11] = 1500;
+	$@sro_craft_offset[11] = 21;
+	$@sro_craft_size[11] = 1;
+	setarray $@sro_mat_id[21],998;
+	setarray $@sro_mat_amount[21],25;
+	$@sro_craft_id[12] = 1207;
+	$@sro_craft_cat[12] = 0;
+	$@sro_craft_fee[12] = 1500;
+	$@sro_craft_offset[12] = 22;
+	$@sro_craft_size[12] = 1;
+	setarray $@sro_mat_id[22],998;
+	setarray $@sro_mat_amount[22],50;
+	$@sro_craft_id[13] = 1210;
+	$@sro_craft_cat[13] = 0;
+	$@sro_craft_fee[13] = 3000;
+	$@sro_craft_offset[13] = 23;
+	$@sro_craft_size[13] = 1;
+	setarray $@sro_mat_id[23],999;
+	setarray $@sro_mat_amount[23],17;
+	$@sro_craft_id[14] = 1213;
+	$@sro_craft_cat[14] = 0;
+	$@sro_craft_fee[14] = 3000;
+	$@sro_craft_offset[14] = 24;
+	$@sro_craft_size[14] = 1;
+	setarray $@sro_mat_id[24],999;
+	setarray $@sro_mat_amount[24],30;
+	$@sro_craft_id[15] = 1216;
+	$@sro_craft_cat[15] = 0;
+	$@sro_craft_fee[15] = 3000;
+	$@sro_craft_offset[15] = 25;
+	$@sro_craft_size[15] = 1;
+	setarray $@sro_mat_id[25],999;
+	setarray $@sro_mat_amount[25],40;
+	$@sro_craft_id[16] = 1219;
+	$@sro_craft_cat[16] = 0;
+	$@sro_craft_fee[16] = 4500;
+	$@sro_craft_offset[16] = 26;
+	$@sro_craft_size[16] = 3;
+	setarray $@sro_mat_id[26],984,999,726;
+	setarray $@sro_mat_amount[26],4,40,1;
+	$@sro_craft_id[17] = 1222;
+	$@sro_craft_cat[17] = 0;
+	$@sro_craft_fee[17] = 4500;
+	$@sro_craft_offset[17] = 29;
+	$@sro_craft_size[17] = 3;
+	setarray $@sro_mat_id[29],984,999,729;
+	setarray $@sro_mat_amount[29],4,60,1;
+	$@sro_craft_id[18] = 1116;
+	$@sro_craft_cat[18] = 0;
+	$@sro_craft_fee[18] = 1500;
+	$@sro_craft_offset[18] = 32;
+	$@sro_craft_size[18] = 2;
+	setarray $@sro_mat_id[32],998,958;
+	setarray $@sro_mat_amount[32],35,15;
+	$@sro_craft_id[19] = 1151;
+	$@sro_craft_cat[19] = 0;
+	$@sro_craft_fee[19] = 3000;
+	$@sro_craft_offset[19] = 34;
+	$@sro_craft_size[19] = 2;
+	setarray $@sro_mat_id[34],999,957;
+	setarray $@sro_mat_amount[34],25,20;
+	$@sro_craft_id[20] = 1154;
+	$@sro_craft_cat[20] = 0;
+	$@sro_craft_fee[20] = 3000;
+	$@sro_craft_offset[20] = 36;
+	$@sro_craft_size[20] = 1;
+	setarray $@sro_mat_id[36],999;
+	setarray $@sro_mat_amount[36],45;
+	$@sro_craft_id[21] = 1157;
+	$@sro_craft_cat[21] = 0;
+	$@sro_craft_fee[21] = 4500;
+	$@sro_craft_offset[21] = 37;
+	$@sro_craft_size[21] = 2;
+	setarray $@sro_mat_id[37],984,999;
+	setarray $@sro_mat_amount[37],12,10;
+	$@sro_craft_id[22] = 1160;
+	$@sro_craft_cat[22] = 0;
+	$@sro_craft_fee[22] = 4500;
+	$@sro_craft_offset[22] = 39;
+	$@sro_craft_size[22] = 2;
+	setarray $@sro_mat_id[39],984,999;
+	setarray $@sro_mat_amount[39],12,20;
+	$@sro_craft_id[23] = 1163;
+	$@sro_craft_cat[23] = 0;
+	$@sro_craft_fee[23] = 4500;
+	$@sro_craft_offset[23] = 41;
+	$@sro_craft_size[23] = 3;
+	setarray $@sro_mat_id[41],984,999,733;
+	setarray $@sro_mat_amount[41],16,20,1;
+	$@sro_craft_id[24] = 1301;
+	$@sro_craft_cat[24] = 0;
+	$@sro_craft_fee[24] = 1500;
+	$@sro_craft_offset[24] = 44;
+	$@sro_craft_size[24] = 1;
+	setarray $@sro_mat_id[44],998;
+	setarray $@sro_mat_amount[44],10;
+	$@sro_craft_id[25] = 1351;
+	$@sro_craft_cat[25] = 0;
+	$@sro_craft_fee[25] = 1500;
+	$@sro_craft_offset[25] = 45;
+	$@sro_craft_size[25] = 1;
+	setarray $@sro_mat_id[45],998;
+	setarray $@sro_mat_amount[45],110;
+	$@sro_craft_id[26] = 1354;
+	$@sro_craft_cat[26] = 0;
+	$@sro_craft_fee[26] = 3000;
+	$@sro_craft_offset[26] = 46;
+	$@sro_craft_size[26] = 1;
+	setarray $@sro_mat_id[46],999;
+	setarray $@sro_mat_amount[46],30;
+	$@sro_craft_id[27] = 1357;
+	$@sro_craft_cat[27] = 0;
+	$@sro_craft_fee[27] = 4500;
+	$@sro_craft_offset[27] = 47;
+	$@sro_craft_size[27] = 3;
+	setarray $@sro_mat_id[47],984,999,922;
+	setarray $@sro_mat_amount[47],4,20,30;
+	$@sro_craft_id[28] = 1360;
+	$@sro_craft_cat[28] = 0;
+	$@sro_craft_fee[28] = 4500;
+	$@sro_craft_offset[28] = 50;
+	$@sro_craft_size[28] = 3;
+	setarray $@sro_mat_id[50],984,999,719;
+	setarray $@sro_mat_amount[50],8,10,1;
+	$@sro_craft_id[29] = 1501;
+	$@sro_craft_cat[29] = 0;
+	$@sro_craft_fee[29] = 1500;
+	$@sro_craft_offset[29] = 53;
+	$@sro_craft_size[29] = 1;
+	setarray $@sro_mat_id[53],998;
+	setarray $@sro_mat_amount[53],3;
+	$@sro_craft_id[30] = 1504;
+	$@sro_craft_cat[30] = 0;
+	$@sro_craft_fee[30] = 1500;
+	$@sro_craft_offset[30] = 54;
+	$@sro_craft_size[30] = 1;
+	setarray $@sro_mat_id[54],998;
+	setarray $@sro_mat_amount[54],30;
+	$@sro_craft_id[31] = 1507;
+	$@sro_craft_cat[31] = 0;
+	$@sro_craft_fee[31] = 3000;
+	$@sro_craft_offset[31] = 55;
+	$@sro_craft_size[31] = 1;
+	setarray $@sro_mat_id[55],999;
+	setarray $@sro_mat_amount[55],20;
+	$@sro_craft_id[32] = 1510;
+	$@sro_craft_cat[32] = 0;
+	$@sro_craft_fee[32] = 3000;
+	$@sro_craft_offset[32] = 56;
+	$@sro_craft_size[32] = 1;
+	setarray $@sro_mat_id[56],999;
+	setarray $@sro_mat_amount[56],33;
+	$@sro_craft_id[33] = 1519;
+	$@sro_craft_cat[33] = 0;
+	$@sro_craft_fee[33] = 3000;
+	$@sro_craft_offset[33] = 57;
+	$@sro_craft_size[33] = 1;
+	setarray $@sro_mat_id[57],999;
+	setarray $@sro_mat_amount[57],45;
+	$@sro_craft_id[34] = 1513;
+	$@sro_craft_cat[34] = 0;
+	$@sro_craft_fee[34] = 4500;
+	$@sro_craft_offset[34] = 58;
+	$@sro_craft_size[34] = 2;
+	setarray $@sro_mat_id[58],999,730;
+	setarray $@sro_mat_amount[58],85,1;
+	$@sro_craft_id[35] = 1516;
+	$@sro_craft_cat[35] = 0;
+	$@sro_craft_fee[35] = 4500;
+	$@sro_craft_offset[35] = 60;
+	$@sro_craft_size[35] = 2;
+	setarray $@sro_mat_id[60],999,963;
+	setarray $@sro_mat_amount[60],100,20;
+	$@sro_craft_id[36] = 1522;
+	$@sro_craft_cat[36] = 0;
+	$@sro_craft_fee[36] = 4500;
+	$@sro_craft_offset[36] = 62;
+	$@sro_craft_size[36] = 2;
+	setarray $@sro_mat_id[62],999,968;
+	setarray $@sro_mat_amount[62],120,1;
+	$@sro_craft_id[37] = 1801;
+	$@sro_craft_cat[37] = 0;
+	$@sro_craft_fee[37] = 1500;
+	$@sro_craft_offset[37] = 64;
+	$@sro_craft_size[37] = 2;
+	setarray $@sro_mat_id[64],998,722;
+	setarray $@sro_mat_amount[64],160,1;
+	$@sro_craft_id[38] = 1803;
+	$@sro_craft_cat[38] = 0;
+	$@sro_craft_fee[38] = 3000;
+	$@sro_craft_offset[38] = 66;
+	$@sro_craft_size[38] = 1;
+	setarray $@sro_mat_id[66],999;
+	setarray $@sro_mat_amount[66],50;
+	$@sro_craft_id[39] = 1805;
+	$@sro_craft_cat[39] = 0;
+	$@sro_craft_fee[39] = 3000;
+	$@sro_craft_offset[39] = 67;
+	$@sro_craft_size[39] = 1;
+	setarray $@sro_mat_id[67],999;
+	setarray $@sro_mat_amount[67],65;
+	$@sro_craft_id[40] = 1807;
+	$@sro_craft_cat[40] = 0;
+	$@sro_craft_fee[40] = 4500;
+	$@sro_craft_offset[40] = 68;
+	$@sro_craft_size[40] = 2;
+	setarray $@sro_mat_id[68],984,723;
+	setarray $@sro_mat_amount[68],4,10;
+	$@sro_craft_id[41] = 1809;
+	$@sro_craft_cat[41] = 0;
+	$@sro_craft_fee[41] = 4500;
+	$@sro_craft_offset[41] = 70;
+	$@sro_craft_size[41] = 2;
+	setarray $@sro_mat_id[70],984,728;
+	setarray $@sro_mat_amount[70],8,10;
+	$@sro_craft_id[42] = 1811;
+	$@sro_craft_cat[42] = 0;
+	$@sro_craft_fee[42] = 4500;
+	$@sro_craft_offset[42] = 72;
+	$@sro_craft_size[42] = 2;
+	setarray $@sro_mat_id[72],984,727;
+	setarray $@sro_mat_amount[72],4,10;
+	$@sro_craft_id[43] = 1401;
+	$@sro_craft_cat[43] = 0;
+	$@sro_craft_fee[43] = 1500;
+	$@sro_craft_offset[43] = 74;
+	$@sro_craft_size[43] = 1;
+	setarray $@sro_mat_id[74],998;
+	setarray $@sro_mat_amount[74],3;
+	$@sro_craft_id[44] = 1404;
+	$@sro_craft_cat[44] = 0;
+	$@sro_craft_fee[44] = 1500;
+	$@sro_craft_offset[44] = 75;
+	$@sro_craft_size[44] = 1;
+	setarray $@sro_mat_id[75],998;
+	setarray $@sro_mat_amount[75],35;
+	$@sro_craft_id[45] = 1407;
+	$@sro_craft_cat[45] = 0;
+	$@sro_craft_fee[45] = 1500;
+	$@sro_craft_offset[45] = 76;
+	$@sro_craft_size[45] = 1;
+	setarray $@sro_mat_id[76],998;
+	setarray $@sro_mat_amount[76],70;
+	$@sro_craft_id[46] = 1451;
+	$@sro_craft_cat[46] = 0;
+	$@sro_craft_fee[46] = 3000;
+	$@sro_craft_offset[46] = 77;
+	$@sro_craft_size[46] = 1;
+	setarray $@sro_mat_id[77],999;
+	setarray $@sro_mat_amount[77],25;
+	$@sro_craft_id[47] = 1454;
+	$@sro_craft_cat[47] = 0;
+	$@sro_craft_fee[47] = 3000;
+	$@sro_craft_offset[47] = 78;
+	$@sro_craft_size[47] = 1;
+	setarray $@sro_mat_id[78],999;
+	setarray $@sro_mat_amount[78],40;
+	$@sro_craft_id[48] = 1457;
+	$@sro_craft_cat[48] = 0;
+	$@sro_craft_fee[48] = 3000;
+	$@sro_craft_offset[48] = 79;
+	$@sro_craft_size[48] = 1;
+	setarray $@sro_mat_id[79],999;
+	setarray $@sro_mat_amount[79],55;
+	$@sro_craft_id[49] = 1460;
+	$@sro_craft_cat[49] = 0;
+	$@sro_craft_fee[49] = 4500;
+	$@sro_craft_offset[49] = 80;
+	$@sro_craft_size[49] = 3;
+	setarray $@sro_mat_id[80],984,999,720;
+	setarray $@sro_mat_amount[80],8,10,5;
+	$@sro_craft_id[50] = 1463;
+	$@sro_craft_cat[50] = 0;
+	$@sro_craft_fee[50] = 4500;
+	$@sro_craft_offset[50] = 83;
+	$@sro_craft_size[50] = 2;
+	setarray $@sro_mat_id[83],984,999;
+	setarray $@sro_mat_amount[83],12,10;
+	$@sro_craft_id[51] = 1410;
+	$@sro_craft_cat[51] = 0;
+	$@sro_craft_fee[51] = 4500;
+	$@sro_craft_offset[51] = 85;
+	$@sro_craft_size[51] = 3;
+	setarray $@sro_mat_id[85],984,723,923;
+	setarray $@sro_mat_amount[85],12,3,2;
+	$@sro_craft_id[52] = 12041;
+	$@sro_craft_cat[52] = 3;
+	$@sro_craft_fee[52] = 500;
+	$@sro_craft_offset[52] = 88;
+	$@sro_craft_size[52] = 4;
+	setarray $@sro_mat_id[88],7472,940,7031,7457;
+	setarray $@sro_mat_amount[88],0,5,1,1;
+	$@sro_craft_id[53] = 12046;
+	$@sro_craft_cat[53] = 3;
+	$@sro_craft_fee[53] = 500;
+	$@sro_craft_offset[53] = 92;
+	$@sro_craft_size[53] = 3;
+	setarray $@sro_mat_id[92],7472,514,501;
+	setarray $@sro_mat_amount[92],0,3,2;
+	$@sro_craft_id[54] = 12051;
+	$@sro_craft_cat[54] = 3;
+	$@sro_craft_fee[54] = 500;
+	$@sro_craft_offset[54] = 95;
+	$@sro_craft_size[54] = 4;
+	setarray $@sro_mat_id[95],7472,960,511,503;
+	setarray $@sro_mat_amount[95],0,10,10,1;
+	$@sro_craft_id[55] = 12056;
+	$@sro_craft_cat[55] = 3;
+	$@sro_craft_fee[55] = 500;
+	$@sro_craft_offset[55] = 99;
+	$@sro_craft_size[55] = 4;
+	setarray $@sro_mat_id[99],7472,577,908,1024;
+	setarray $@sro_mat_amount[99],0,1,10,1;
+	$@sro_craft_id[56] = 12061;
+	$@sro_craft_cat[56] = 3;
+	$@sro_craft_fee[56] = 500;
+	$@sro_craft_offset[56] = 103;
+	$@sro_craft_size[56] = 4;
+	setarray $@sro_mat_id[103],7472,518,514,501;
+	setarray $@sro_mat_amount[103],0,1,2,1;
+	$@sro_craft_id[57] = 12066;
+	$@sro_craft_cat[57] = 3;
+	$@sro_craft_fee[57] = 500;
+	$@sro_craft_offset[57] = 107;
+	$@sro_craft_size[57] = 4;
+	setarray $@sro_mat_id[107],7472,942,7031,7457;
+	setarray $@sro_mat_amount[107],0,5,1,1;
+	$@sro_craft_id[58] = 12042;
+	$@sro_craft_cat[58] = 3;
+	$@sro_craft_fee[58] = 500;
+	$@sro_craft_offset[58] = 111;
+	$@sro_craft_size[58] = 5;
+	setarray $@sro_mat_id[111],7473,918,511,508,7454;
+	setarray $@sro_mat_amount[111],0,20,10,10,1;
+	$@sro_craft_id[59] = 12052;
+	$@sro_craft_cat[59] = 3;
+	$@sro_craft_fee[59] = 500;
+	$@sro_craft_offset[59] = 116;
+	$@sro_craft_size[59] = 5;
+	setarray $@sro_mat_id[116],7473,966,956,951,579;
+	setarray $@sro_mat_amount[116],0,10,5,5,1;
+	$@sro_craft_id[60] = 12047;
+	$@sro_craft_cat[60] = 3;
+	$@sro_craft_fee[60] = 500;
+	$@sro_craft_offset[60] = 121;
+	$@sro_craft_size[60] = 4;
+	setarray $@sro_mat_id[121],7473,510,507,508;
+	setarray $@sro_mat_amount[121],0,5,10,10;
+	$@sro_craft_id[61] = 12057;
+	$@sro_craft_cat[61] = 3;
+	$@sro_craft_fee[61] = 500;
+	$@sro_craft_offset[61] = 125;
+	$@sro_craft_size[61] = 5;
+	setarray $@sro_mat_id[125],7473,577,7454,1062,515;
+	setarray $@sro_mat_amount[125],0,1,1,5,3;
+	$@sro_craft_id[62] = 12062;
+	$@sro_craft_cat[62] = 3;
+	$@sro_craft_fee[62] = 500;
+	$@sro_craft_offset[62] = 130;
+	$@sro_craft_size[62] = 5;
+	setarray $@sro_mat_id[130],7473,7182,539,519,736;
+	setarray $@sro_mat_amount[130],0,10,1,1,1;
+	$@sro_craft_id[63] = 12067;
+	$@sro_craft_cat[63] = 3;
+	$@sro_craft_fee[63] = 500;
+	$@sro_craft_offset[63] = 135;
+	$@sro_craft_size[63] = 5;
+	setarray $@sro_mat_id[135],7473,531,534,533,620;
+	setarray $@sro_mat_amount[135],0,3,2,1,2;
+	$@sro_craft_id[64] = 12063;
+	$@sro_craft_cat[64] = 3;
+	$@sro_craft_fee[64] = 500;
+	$@sro_craft_offset[64] = 140;
+	$@sro_craft_size[64] = 6;
+	setarray $@sro_mat_id[140],7474,512,513,582,578,7452;
+	setarray $@sro_mat_amount[140],0,5,5,5,5,1;
+	$@sro_craft_id[65] = 12048;
+	$@sro_craft_cat[65] = 3;
+	$@sro_craft_fee[65] = 500;
+	$@sro_craft_offset[65] = 146;
+	$@sro_craft_size[65] = 4;
+	setarray $@sro_mat_id[146],7474,518,509,7452;
+	setarray $@sro_mat_amount[146],0,2,10,1;
+	$@sro_craft_id[66] = 12043;
+	$@sro_craft_cat[66] = 3;
+	$@sro_craft_fee[66] = 500;
+	$@sro_craft_offset[66] = 150;
+	$@sro_craft_size[66] = 6;
+	setarray $@sro_mat_id[150],7474,517,7031,511,7286,7455;
+	setarray $@sro_mat_amount[150],0,4,1,10,5,1;
+	$@sro_craft_id[67] = 12053;
+	$@sro_craft_cat[67] = 3;
+	$@sro_craft_fee[67] = 500;
+	$@sro_craft_offset[67] = 156;
+	$@sro_craft_size[67] = 5;
+	setarray $@sro_mat_id[156],7474,966,961,518,7453;
+	setarray $@sro_mat_amount[156],0,20,10,1,1;
+	$@sro_craft_id[68] = 12058;
+	$@sro_craft_cat[68] = 3;
+	$@sro_craft_fee[68] = 500;
+	$@sro_craft_offset[68] = 161;
+	$@sro_craft_size[68] = 5;
+	setarray $@sro_mat_id[161],7474,962,548,549,7453;
+	setarray $@sro_mat_amount[161],0,10,10,5,1;
+	$@sro_craft_id[69] = 12068;
+	$@sro_craft_cat[69] = 3;
+	$@sro_craft_fee[69] = 500;
+	$@sro_craft_offset[69] = 166;
+	$@sro_craft_size[69] = 5;
+	setarray $@sro_mat_id[166],7474,516,549,633,7453;
+	setarray $@sro_mat_amount[166],0,10,10,1,1;
+	$@sro_craft_id[70] = 12049;
+	$@sro_craft_cat[70] = 3;
+	$@sro_craft_fee[70] = 500;
+	$@sro_craft_offset[70] = 171;
+	$@sro_craft_size[70] = 6;
+	setarray $@sro_mat_id[171],7475,578,568,582,970,514;
+	setarray $@sro_mat_amount[171],0,10,4,10,2,5;
+	$@sro_craft_id[71] = 12054;
+	$@sro_craft_cat[71] = 3;
+	$@sro_craft_fee[71] = 500;
+	$@sro_craft_offset[71] = 177;
+	$@sro_craft_size[71] = 6;
+	setarray $@sro_mat_id[177],7475,962,509,7194,7031,1024;
+	setarray $@sro_mat_amount[177],0,30,10,10,1,20;
+	$@sro_craft_id[72] = 12044;
+	$@sro_craft_cat[72] = 3;
+	$@sro_craft_fee[72] = 500;
+	$@sro_craft_offset[72] = 183;
+	$@sro_craft_size[72] = 7;
+	setarray $@sro_mat_id[183],7475,517,507,508,511,7453,568;
+	setarray $@sro_mat_amount[183],0,5,3,2,3,1,1;
+	$@sro_craft_id[73] = 12064;
+	$@sro_craft_cat[73] = 3;
+	$@sro_craft_fee[73] = 500;
+	$@sro_craft_offset[73] = 190;
+	$@sro_craft_size[73] = 7;
+	setarray $@sro_mat_id[190],7475,580,519,548,508,517,7453;
+	setarray $@sro_mat_amount[190],0,5,15,10,10,1,1;
+	$@sro_craft_id[74] = 12059;
+	$@sro_craft_cat[74] = 3;
+	$@sro_craft_fee[74] = 500;
+	$@sro_craft_offset[74] = 197;
+	$@sro_craft_size[74] = 6;
+	setarray $@sro_mat_id[197],7475,577,7455,7066,515,1062;
+	setarray $@sro_mat_amount[197],0,3,1,10,10,10;
+	$@sro_craft_id[75] = 12069;
+	$@sro_craft_cat[75] = 3;
+	$@sro_craft_fee[75] = 500;
+	$@sro_craft_offset[75] = 203;
+	$@sro_craft_size[75] = 6;
+	setarray $@sro_mat_id[203],7475,1054,945,509,579,7453;
+	setarray $@sro_mat_amount[203],0,10,10,10,5,2;
+	$@sro_craft_id[76] = 12050;
+	$@sro_craft_cat[76] = 3;
+	$@sro_craft_fee[76] = 500;
+	$@sro_craft_offset[76] = 209;
+	$@sro_craft_size[76] = 6;
+	setarray $@sro_mat_id[209],7476,522,505,970,568,7452;
+	setarray $@sro_mat_amount[209],0,4,1,2,2,1;
+	$@sro_craft_id[77] = 12045;
+	$@sro_craft_cat[77] = 3;
+	$@sro_craft_fee[77] = 500;
+	$@sro_craft_offset[77] = 215;
+	$@sro_craft_size[77] = 6;
+	setarray $@sro_mat_id[215],7476,516,518,7457,515,577;
+	setarray $@sro_mat_amount[215],0,10,2,1,3,1;
+	$@sro_craft_id[78] = 12065;
+	$@sro_craft_cat[78] = 3;
+	$@sro_craft_fee[78] = 500;
+	$@sro_craft_offset[78] = 221;
+	$@sro_craft_size[78] = 7;
+	setarray $@sro_mat_id[221],7476,520,521,7100,7198,7453,7452;
+	setarray $@sro_mat_amount[221],0,2,3,10,6,1,1;
+	$@sro_craft_id[79] = 12060;
+	$@sro_craft_cat[79] = 3;
+	$@sro_craft_fee[79] = 500;
+	$@sro_craft_offset[79] = 228;
+	$@sro_craft_size[79] = 6;
+	setarray $@sro_mat_id[228],7476,7006,1062,7482,520,507;
+	setarray $@sro_mat_amount[228],0,20,20,1,10,10;
+	$@sro_craft_id[80] = 12055;
+	$@sro_craft_cat[80] = 3;
+	$@sro_craft_fee[80] = 500;
+	$@sro_craft_offset[80] = 234;
+	$@sro_craft_size[80] = 6;
+	setarray $@sro_mat_id[234],7476,553,508,7455,7456,511;
+	setarray $@sro_mat_amount[234],0,20,10,1,1,20;
+	$@sro_craft_id[81] = 12070;
+	$@sro_craft_cat[81] = 3;
+	$@sro_craft_fee[81] = 500;
+	$@sro_craft_offset[81] = 240;
+	$@sro_craft_size[81] = 6;
+	setarray $@sro_mat_id[240],7476,904,1042,7198,7031,7457;
+	setarray $@sro_mat_amount[240],0,20,10,10,2,1;
+	$@sro_craft_id[82] = 12071;
+	$@sro_craft_cat[82] = 3;
+	$@sro_craft_fee[82] = 500;
+	$@sro_craft_offset[82] = 246;
+	$@sro_craft_size[82] = 6;
+	setarray $@sro_mat_id[246],7477,517,518,508,522,954;
+	setarray $@sro_mat_amount[246],0,10,2,1,1,20;
+	$@sro_craft_id[83] = 12076;
+	$@sro_craft_cat[83] = 3;
+	$@sro_craft_fee[83] = 500;
+	$@sro_craft_offset[83] = 252;
+	$@sro_craft_size[83] = 6;
+	setarray $@sro_mat_id[252],7477,581,533,921,970,7456;
+	setarray $@sro_mat_amount[252],0,3,3,20,1,1;
+	$@sro_craft_id[84] = 12091;
+	$@sro_craft_cat[84] = 3;
+	$@sro_craft_fee[84] = 500;
+	$@sro_craft_offset[84] = 258;
+	$@sro_craft_size[84] = 7;
+	setarray $@sro_mat_id[258],7477,7164,539,548,519,620,7453;
+	setarray $@sro_mat_amount[258],0,20,10,10,10,5,1;
+	$@sro_craft_id[85] = 12086;
+	$@sro_craft_cat[85] = 3;
+	$@sro_craft_fee[85] = 500;
+	$@sro_craft_offset[85] = 265;
+	$@sro_craft_size[85] = 5;
+	setarray $@sro_mat_id[265],7477,7286,567,7453,568;
+	setarray $@sro_mat_amount[265],0,20,20,1,20;
+	$@sro_craft_id[86] = 12081;
+	$@sro_craft_cat[86] = 3;
+	$@sro_craft_fee[86] = 500;
+	$@sro_craft_offset[86] = 270;
+	$@sro_craft_size[86] = 6;
+	setarray $@sro_mat_id[270],7477,7188,1033,921,581,518;
+	setarray $@sro_mat_amount[270],0,20,10,20,1,2;
+	$@sro_craft_id[87] = 12096;
+	$@sro_craft_cat[87] = 3;
+	$@sro_craft_fee[87] = 500;
+	$@sro_craft_offset[87] = 276;
+	$@sro_craft_size[87] = 6;
+	setarray $@sro_mat_id[276],7477,903,1015,705,1061,704;
+	setarray $@sro_mat_amount[276],0,5,5,10,10,1;
+	$@sro_craft_id[88] = 12072;
+	$@sro_craft_cat[88] = 3;
+	$@sro_craft_fee[88] = 500;
+	$@sro_craft_offset[88] = 282;
+	$@sro_craft_size[88] = 7;
+	setarray $@sro_mat_id[282],7478,517,7098,1003,7455,1019,509;
+	setarray $@sro_mat_amount[282],0,10,1,2,1,15,10;
+	$@sro_craft_id[89] = 12077;
+	$@sro_craft_cat[89] = 3;
+	$@sro_craft_fee[89] = 500;
+	$@sro_craft_offset[89] = 289;
+	$@sro_craft_size[89] = 6;
+	setarray $@sro_mat_id[289],7478,526,518,509,520,7452;
+	setarray $@sro_mat_amount[289],0,4,2,5,10,1;
+	$@sro_craft_id[90] = 12092;
+	$@sro_craft_cat[90] = 3;
+	$@sro_craft_fee[90] = 500;
+	$@sro_craft_offset[90] = 295;
+	$@sro_craft_size[90] = 7;
+	setarray $@sro_mat_id[295],7478,580,522,7453,708,609,619;
+	setarray $@sro_mat_amount[295],0,10,5,1,5,5,2;
+	$@sro_craft_id[91] = 12087;
+	$@sro_craft_cat[91] = 3;
+	$@sro_craft_fee[91] = 500;
+	$@sro_craft_offset[91] = 302;
+	$@sro_craft_size[91] = 7;
+	setarray $@sro_mat_id[302],7478,7003,1062,515,521,508,7452;
+	setarray $@sro_mat_amount[302],0,10,10,10,10,10,1;
+	$@sro_craft_id[92] = 12082;
+	$@sro_craft_cat[92] = 3;
+	$@sro_craft_fee[92] = 500;
+	$@sro_craft_offset[92] = 309;
+	$@sro_craft_size[92] = 7;
+	setarray $@sro_mat_id[309],7478,1023,521,1028,579,537,7453;
+	setarray $@sro_mat_amount[309],0,10,5,10,2,10,1;
+	$@sro_craft_id[93] = 12097;
+	$@sro_craft_cat[93] = 3;
+	$@sro_craft_fee[93] = 500;
+	$@sro_craft_offset[93] = 316;
+	$@sro_craft_size[93] = 7;
+	setarray $@sro_mat_id[316],7478,936,956,7194,517,581,966;
+	setarray $@sro_mat_amount[316],0,10,5,10,5,10,10;
+	$@sro_craft_id[94] = 12073;
+	$@sro_craft_cat[94] = 3;
+	$@sro_craft_fee[94] = 500;
+	$@sro_craft_offset[94] = 323;
+	$@sro_craft_size[94] = 7;
+	setarray $@sro_mat_id[323],7479,948,515,1062,521,520,7454;
+	setarray $@sro_mat_amount[323],0,20,10,10,2,1,1;
+	$@sro_craft_id[95] = 12078;
+	$@sro_craft_cat[95] = 3;
+	$@sro_craft_fee[95] = 500;
+	$@sro_craft_offset[95] = 330;
+	$@sro_craft_size[95] = 7;
+	setarray $@sro_mat_id[330],7479,576,520,610,521,526,7452;
+	setarray $@sro_mat_amount[330],0,4,10,3,10,6,1;
+	$@sro_craft_id[96] = 12093;
+	$@sro_craft_cat[96] = 3;
+	$@sro_craft_fee[96] = 500;
+	$@sro_craft_offset[96] = 337;
+	$@sro_craft_size[96] = 8;
+	setarray $@sro_mat_id[337],7479,580,526,517,578,7455,548,7453;
+	setarray $@sro_mat_amount[337],0,10,2,5,10,1,10,1;
+	$@sro_craft_id[97] = 12088;
+	$@sro_craft_cat[97] = 3;
+	$@sro_craft_fee[97] = 500;
+	$@sro_craft_offset[97] = 345;
+	$@sro_craft_size[97] = 7;
+	setarray $@sro_mat_id[345],7479,606,7455,517,520,1062,515;
+	setarray $@sro_mat_amount[345],0,1,1,10,10,10,10;
+	$@sro_craft_id[98] = 12083;
+	$@sro_craft_cat[98] = 3;
+	$@sro_craft_fee[98] = 500;
+	$@sro_craft_offset[98] = 352;
+	$@sro_craft_size[98] = 7;
+	setarray $@sro_mat_id[352],7479,7298,517,622,1062,7454,577;
+	setarray $@sro_mat_amount[352],0,20,20,5,10,1,2;
+	$@sro_craft_id[99] = 12098;
+	$@sro_craft_cat[99] = 3;
+	$@sro_craft_fee[99] = 500;
+	$@sro_craft_offset[99] = 359;
+	$@sro_craft_size[99] = 7;
+	setarray $@sro_mat_id[359],7479,578,577,7298,7452,7456,7454;
+	setarray $@sro_mat_amount[359],0,10,5,10,1,2,1;
+	$@sro_craft_id[100] = 12074;
+	$@sro_craft_cat[100] = 3;
+	$@sro_craft_fee[100] = 500;
+	$@sro_craft_offset[100] = 366;
+	$@sro_craft_size[100] = 8;
+	setarray $@sro_mat_id[366],7480,1050,7482,548,7455,1003,511,1024;
+	setarray $@sro_mat_amount[366],0,40,1,10,1,2,30,10;
+	$@sro_craft_id[101] = 12079;
+	$@sro_craft_cat[101] = 3;
+	$@sro_craft_fee[101] = 500;
+	$@sro_craft_offset[101] = 374;
+	$@sro_craft_size[101] = 8;
+	setarray $@sro_mat_id[374],7480,610,582,970,526,505,7452,521;
+	setarray $@sro_mat_amount[374],0,10,10,5,4,2,1,10;
+	$@sro_craft_id[102] = 12094;
+	$@sro_craft_cat[102] = 3;
+	$@sro_craft_fee[102] = 500;
+	$@sro_craft_offset[102] = 382;
+	$@sro_craft_size[102] = 8;
+	setarray $@sro_mat_id[382],7480,619,582,578,7456,634,533,970;
+	setarray $@sro_mat_amount[382],0,5,10,10,1,1,5,2;
+	$@sro_craft_id[103] = 12089;
+	$@sro_craft_cat[103] = 3;
+	$@sro_craft_fee[103] = 500;
+	$@sro_craft_offset[103] = 390;
+	$@sro_craft_size[103] = 8;
+	setarray $@sro_mat_id[390],7480,517,526,711,7454,508,509,507;
+	setarray $@sro_mat_amount[390],0,10,5,20,4,5,10,5;
+	$@sro_craft_id[104] = 12084;
+	$@sro_craft_cat[104] = 3;
+	$@sro_craft_fee[104] = 500;
+	$@sro_craft_offset[104] = 398;
+	$@sro_craft_size[104] = 8;
+	setarray $@sro_mat_id[398],7480,7123,1037,610,526,7455,7456,632;
+	setarray $@sro_mat_amount[398],0,10,20,3,6,1,1,1;
+	$@sro_craft_id[105] = 12099;
+	$@sro_craft_cat[105] = 3;
+	$@sro_craft_fee[105] = 500;
+	$@sro_craft_offset[105] = 406;
+	$@sro_craft_size[105] = 8;
+	setarray $@sro_mat_id[406],7480,702,605,606,970,526,7456,531;
+	setarray $@sro_mat_amount[406],0,1,2,2,2,6,1,10;
+	$@sro_craft_id[106] = 12075;
+	$@sro_craft_cat[106] = 3;
+	$@sro_craft_fee[106] = 500;
+	$@sro_craft_offset[106] = 414;
+	$@sro_craft_size[106] = 9;
+	setarray $@sro_mat_id[414],7481,1015,7482,970,606,7455,526,610,505;
+	setarray $@sro_mat_amount[414],0,20,1,1,2,1,5,10,2;
+	$@sro_craft_id[107] = 12080;
+	$@sro_craft_cat[107] = 3;
+	$@sro_craft_fee[107] = 500;
+	$@sro_craft_offset[107] = 423;
+	$@sro_craft_size[107] = 9;
+	setarray $@sro_mat_id[423],7481,1033,707,521,526,568,576,607,510;
+	setarray $@sro_mat_amount[423],0,10,1,5,5,5,5,1,10;
+	$@sro_craft_id[108] = 12095;
+	$@sro_craft_cat[108] = 3;
+	$@sro_craft_fee[108] = 500;
+	$@sro_craft_offset[108] = 432;
+	$@sro_craft_size[108] = 9;
+	setarray $@sro_mat_id[432],7481,607,7066,7119,526,645,970,576,710;
+	setarray $@sro_mat_amount[432],0,1,10,10,4,3,5,2,1;
+	$@sro_craft_id[109] = 12090;
+	$@sro_craft_cat[109] = 3;
+	$@sro_craft_fee[109] = 500;
+	$@sro_craft_offset[109] = 441;
+	$@sro_craft_size[109] = 9;
+	setarray $@sro_mat_id[441],7481,904,7125,606,610,621,526,7455,7482;
+	setarray $@sro_mat_amount[441],0,20,20,2,3,3,10,1,1;
+	$@sro_craft_id[110] = 12085;
+	$@sro_craft_cat[110] = 3;
+	$@sro_craft_fee[110] = 500;
+	$@sro_craft_offset[110] = 450;
+	$@sro_craft_size[110] = 9;
+	setarray $@sro_mat_id[450],7481,929,934,608,605,950,7455,609,621;
+	setarray $@sro_mat_amount[450],0,20,10,1,2,10,2,10,2;
+	$@sro_craft_id[111] = 12100;
+	$@sro_craft_cat[111] = 3;
+	$@sro_craft_fee[111] = 500;
+	$@sro_craft_offset[111] = 459;
+	$@sro_craft_size[111] = 9;
+	setarray $@sro_mat_id[459],7481,1022,706,1033,7100,610,7454,7452,709;
+	setarray $@sro_mat_amount[459],0,10,2,10,10,4,1,1,2;
+	$@sro_craft_id[112] = 998;
+	$@sro_craft_cat[112] = 1;
+	$@sro_craft_fee[112] = 250;
+	$@sro_craft_offset[112] = 468;
+	$@sro_craft_size[112] = 1;
+	setarray $@sro_mat_id[468],1002;
+	setarray $@sro_mat_amount[468],1;
+	$@sro_craft_id[113] = 999;
+	$@sro_craft_cat[113] = 1;
+	$@sro_craft_fee[113] = 250;
+	$@sro_craft_offset[113] = 469;
+	$@sro_craft_size[113] = 2;
+	setarray $@sro_mat_id[469],998,1003;
+	setarray $@sro_mat_amount[469],5,1;
+	$@sro_craft_id[114] = 1000;
+	$@sro_craft_cat[114] = 1;
+	$@sro_craft_fee[114] = 250;
+	$@sro_craft_offset[114] = 471;
+	$@sro_craft_size[114] = 1;
+	setarray $@sro_mat_id[471],1001;
+	setarray $@sro_mat_amount[471],10;
+	$@sro_craft_id[115] = 994;
+	$@sro_craft_cat[115] = 1;
+	$@sro_craft_fee[115] = 250;
+	$@sro_craft_offset[115] = 472;
+	$@sro_craft_size[115] = 1;
+	setarray $@sro_mat_id[472],990;
+	setarray $@sro_mat_amount[472],10;
+	$@sro_craft_id[116] = 995;
+	$@sro_craft_cat[116] = 1;
+	$@sro_craft_fee[116] = 250;
+	$@sro_craft_offset[116] = 473;
+	$@sro_craft_size[116] = 1;
+	setarray $@sro_mat_id[473],991;
+	setarray $@sro_mat_amount[473],10;
+	$@sro_craft_id[117] = 996;
+	$@sro_craft_cat[117] = 1;
+	$@sro_craft_fee[117] = 250;
+	$@sro_craft_offset[117] = 474;
+	$@sro_craft_size[117] = 1;
+	setarray $@sro_mat_id[474],992;
+	setarray $@sro_mat_amount[474],10;
+	$@sro_craft_id[118] = 997;
+	$@sro_craft_cat[118] = 1;
+	$@sro_craft_fee[118] = 250;
+	$@sro_craft_offset[118] = 475;
+	$@sro_craft_size[118] = 1;
+	setarray $@sro_mat_id[475],993;
+	setarray $@sro_mat_amount[475],10;
+	$@sro_craft_id[119] = 501;
+	$@sro_craft_cat[119] = 2;
+	$@sro_craft_fee[119] = 500;
+	$@sro_craft_offset[119] = 476;
+	$@sro_craft_size[119] = 3;
+	setarray $@sro_mat_id[476],7144,507,1093;
+	setarray $@sro_mat_amount[476],0,1,1;
+	$@sro_craft_id[120] = 503;
+	$@sro_craft_cat[120] = 2;
+	$@sro_craft_fee[120] = 500;
+	$@sro_craft_offset[120] = 479;
+	$@sro_craft_size[120] = 3;
+	setarray $@sro_mat_id[479],7144,508,1093;
+	setarray $@sro_mat_amount[479],0,1,1;
+	$@sro_craft_id[121] = 504;
+	$@sro_craft_cat[121] = 2;
+	$@sro_craft_fee[121] = 500;
+	$@sro_craft_offset[121] = 482;
+	$@sro_craft_size[121] = 3;
+	setarray $@sro_mat_id[482],7144,509,1093;
+	setarray $@sro_mat_amount[482],0,1,1;
+	$@sro_craft_id[122] = 505;
+	$@sro_craft_cat[122] = 2;
+	$@sro_craft_fee[122] = 500;
+	$@sro_craft_offset[122] = 485;
+	$@sro_craft_size[122] = 4;
+	setarray $@sro_mat_id[485],7144,510,911,1093;
+	setarray $@sro_mat_amount[485],0,1,1,1;
+	$@sro_craft_id[123] = 545;
+	$@sro_craft_cat[123] = 2;
+	$@sro_craft_fee[123] = 500;
+	$@sro_craft_offset[123] = 489;
+	$@sro_craft_size[123] = 4;
+	setarray $@sro_mat_id[489],7133,501,1092,952;
+	setarray $@sro_mat_amount[489],0,1,1,1;
+	$@sro_craft_id[124] = 546;
+	$@sro_craft_cat[124] = 2;
+	$@sro_craft_fee[124] = 500;
+	$@sro_craft_offset[124] = 493;
+	$@sro_craft_size[124] = 4;
+	setarray $@sro_mat_id[493],7133,503,1092,1017;
+	setarray $@sro_mat_amount[493],0,1,1,1;
+	$@sro_craft_id[125] = 547;
+	$@sro_craft_cat[125] = 2;
+	$@sro_craft_fee[125] = 500;
+	$@sro_craft_offset[125] = 497;
+	$@sro_craft_size[125] = 4;
+	setarray $@sro_mat_id[497],7133,504,1092,1061;
+	setarray $@sro_mat_amount[497],0,1,1,1;
+	$@sro_craft_id[126] = 523;
+	$@sro_craft_cat[126] = 2;
+	$@sro_craft_fee[126] = 500;
+	$@sro_craft_offset[126] = 501;
+	$@sro_craft_size[126] = 1;
+	setarray $@sro_mat_id[501],713;
+	setarray $@sro_mat_amount[501],1;
+	$@sro_craft_id[127] = 678;
+	$@sro_craft_cat[127] = 2;
+	$@sro_craft_fee[127] = 500;
+	$@sro_craft_offset[127] = 502;
+	$@sro_craft_size[127] = 7;
+	setarray $@sro_mat_id[502],937,952,939,7033,972,657,713;
+	setarray $@sro_mat_amount[502],1,1,1,1,1,1,1;
+	$@sro_craft_id[128] = 7135;
+	$@sro_craft_cat[128] = 2;
+	$@sro_craft_fee[128] = 500;
+	$@sro_craft_offset[128] = 509;
+	$@sro_craft_size[128] = 4;
+	setarray $@sro_mat_id[509],7128,970,1059,713;
+	setarray $@sro_mat_amount[509],0,1,1,1;
+	$@sro_craft_id[129] = 7136;
+	$@sro_craft_cat[129] = 2;
+	$@sro_craft_fee[129] = 500;
+	$@sro_craft_offset[129] = 513;
+	$@sro_craft_size[129] = 3;
+	setarray $@sro_mat_id[513],7129,713,929;
+	setarray $@sro_mat_amount[513],0,1,1;
+	$@sro_craft_id[130] = 7137;
+	$@sro_craft_cat[130] = 2;
+	$@sro_craft_fee[130] = 500;
+	$@sro_craft_offset[130] = 516;
+	$@sro_craft_size[130] = 3;
+	setarray $@sro_mat_id[516],7130,713,1032;
+	setarray $@sro_mat_amount[516],0,1,2;
+	$@sro_craft_id[131] = 7138;
+	$@sro_craft_cat[131] = 2;
+	$@sro_craft_fee[131] = 500;
+	$@sro_craft_offset[131] = 519;
+	$@sro_craft_size[131] = 4;
+	setarray $@sro_mat_id[519],7131,713,1050,1051;
+	setarray $@sro_mat_amount[519],0,1,1,1;
+	$@sro_craft_id[132] = 7139;
+	$@sro_craft_cat[132] = 2;
+	$@sro_craft_fee[132] = 500;
+	$@sro_craft_offset[132] = 523;
+	$@sro_craft_size[132] = 5;
+	setarray $@sro_mat_id[523],7132,970,950,1044,713;
+	setarray $@sro_mat_amount[523],0,1,1,1,1;
+	$@sro_craft_id[133] = 12118;
+	$@sro_craft_cat[133] = 2;
+	$@sro_craft_fee[133] = 500;
+	$@sro_craft_offset[133] = 528;
+	$@sro_craft_size[133] = 4;
+	setarray $@sro_mat_id[528],7434,1012,716,1093;
+	setarray $@sro_mat_amount[528],0,2,1,1;
+	$@sro_craft_id[134] = 12119;
+	$@sro_craft_cat[134] = 2;
+	$@sro_craft_fee[134] = 500;
+	$@sro_craft_offset[134] = 532;
+	$@sro_craft_size[134] = 4;
+	setarray $@sro_mat_id[532],7434,950,717,1093;
+	setarray $@sro_mat_amount[532],0,3,1,1;
+	$@sro_craft_id[135] = 12120;
+	$@sro_craft_cat[135] = 2;
+	$@sro_craft_fee[135] = 500;
+	$@sro_craft_offset[135] = 536;
+	$@sro_craft_size[135] = 4;
+	setarray $@sro_mat_id[536],7434,7126,715,1093;
+	setarray $@sro_mat_amount[536],0,2,1,1;
+	$@sro_craft_id[136] = 12121;
+	$@sro_craft_cat[136] = 2;
+	$@sro_craft_fee[136] = 500;
+	$@sro_craft_offset[136] = 540;
+	$@sro_craft_size[136] = 4;
+	setarray $@sro_mat_id[540],7434,1057,717,1093;
+	setarray $@sro_mat_amount[540],0,3,1,1;
+	$@sro_craft_id[137] = 605;
+	$@sro_craft_cat[137] = 2;
+	$@sro_craft_fee[137] = 500;
+	$@sro_craft_offset[137] = 544;
+	$@sro_craft_size[137] = 4;
+	setarray $@sro_mat_id[544],7144,708,970,713;
+	setarray $@sro_mat_amount[544],0,1,1,1;
+	$@sro_craft_id[138] = 606;
+	$@sro_craft_cat[138] = 2;
+	$@sro_craft_fee[138] = 500;
+	$@sro_craft_offset[138] = 548;
+	$@sro_craft_size[138] = 4;
+	setarray $@sro_mat_id[548],7144,704,518,713;
+	setarray $@sro_mat_amount[548],0,1,1,1;
+	$@sro_craft_id[139] = 970;
+	$@sro_craft_cat[139] = 2;
+	$@sro_craft_fee[139] = 500;
+	$@sro_craft_offset[139] = 552;
+	$@sro_craft_size[139] = 5;
+	setarray $@sro_mat_id[552],7127,713,7033,905,1092;
+	setarray $@sro_mat_amount[552],0,1,5,5,1;
+	$@sro_craft_id[140] = 7142;
+	$@sro_craft_cat[140] = 2;
+	$@sro_craft_fee[140] = 500;
+	$@sro_craft_offset[140] = 557;
+	$@sro_craft_size[140] = 4;
+	setarray $@sro_mat_id[557],7144,7140,7141,7143;
+	setarray $@sro_mat_amount[557],0,1,1,1;
+	$@sro_craft_id[141] = 12114;
+	$@sro_craft_cat[141] = 4;
+	$@sro_craft_fee[141] = 500;
+	$@sro_craft_offset[141] = 561;
+	$@sro_craft_size[141] = 2;
+	setarray $@sro_mat_id[561],7433,904;
+	setarray $@sro_mat_amount[561],1,3;
+	$@sro_craft_id[142] = 12115;
+	$@sro_craft_cat[142] = 4;
+	$@sro_craft_fee[142] = 500;
+	$@sro_craft_offset[142] = 563;
+	$@sro_craft_size[142] = 2;
+	setarray $@sro_mat_id[563],7433,946;
+	setarray $@sro_mat_amount[563],1,3;
+	$@sro_craft_id[143] = 12116;
+	$@sro_craft_cat[143] = 4;
+	$@sro_craft_fee[143] = 500;
+	$@sro_craft_offset[143] = 565;
+	$@sro_craft_size[143] = 2;
+	setarray $@sro_mat_id[565],7433,947;
+	setarray $@sro_mat_amount[565],1,3;
+	$@sro_craft_id[144] = 12117;
+	$@sro_craft_cat[144] = 4;
+	$@sro_craft_fee[144] = 500;
+	$@sro_craft_offset[144] = 567;
+	$@sro_craft_size[144] = 2;
+	setarray $@sro_mat_id[567],7433,1013;
+	setarray $@sro_mat_amount[567],1,3;
+	$@sro_craft_id[145] = 984;
+	$@sro_craft_cat[145] = 1;
+	$@sro_craft_fee[145] = 250;
+	$@sro_craft_offset[145] = 569;
+	$@sro_craft_size[145] = 1;
+	setarray $@sro_mat_id[569],756;
+	setarray $@sro_mat_amount[569],5;
+	$@sro_craft_id[146] = 985;
+	$@sro_craft_cat[146] = 1;
+	$@sro_craft_fee[146] = 250;
+	$@sro_craft_offset[146] = 570;
+	$@sro_craft_size[146] = 1;
+	setarray $@sro_mat_id[570],757;
+	setarray $@sro_mat_amount[570],5;
+	end;
+}
+

@@ -1,0 +1,49 @@
+<div id="WorldMap">
+	<div class="border">
+		<div class="titlebar" data-background="basic_interface/titlebar_mid.bmp">
+			<div class="left">
+				<select name="mapList" id="WorldMaps"></select>
+				<span class="current-location" role="status"></span>
+			</div>
+			<div class="right">
+				<button type="button" class="map-action locate-player">Find me</button>
+				<button type="button" class="map-action class-guides-toggle" aria-expanded="false" hidden>Class Guides</button>
+				<button class="base showlvl" data-background="checkbox_0.bmp" data-preload="checkbox_1.bmp"></button>
+				<span data-text="2209">Show Monsters</span>
+				<button
+					class="base togglemaps"
+					data-background="minimap/i_object_3.bmp"
+					data-hover="minimap/i_object_2.bmp"
+				></button>
+				<button
+					class="base close"
+					data-background="basic_interface/sys_close_off.bmp"
+					data-hover="basic_interface/sys_close_on.bmp"
+				></button>
+			</div>
+		</div>
+
+		<div class="map">
+			<div class="content"></div>
+		</div>
+	</div>
+	<aside class="class-guide-panel" aria-label="Class Guides" hidden>
+		<h2>Class Guides</h2>
+		<input class="class-guide-search" type="search" aria-label="Find a class or NPC" placeholder="Find a class or NPC">
+		<div class="class-guide-list"></div>
+	</aside>
+	<div id="map-tooltip" style="display: none">
+		<div class="tooltip-map-details">
+			<div class="tooltip-img"></div>
+			<div class="tooltip-mapname"></div>
+			<div class="tooltip-mapid"></div>
+		</div>
+		<div class="tooltip-monsters" aria-hidden="true">
+			<div class="tooltip-monster-header">
+				<span>Monsters</span>
+				<span class="tooltip-monster-count"></span>
+			</div>
+			<div class="tooltip-monster-list"></div>
+		</div>
+	</div>
+</div>

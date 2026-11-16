@@ -1,0 +1,49 @@
+// Clickable city transport using the existing Blue Crystal sprite.
+prontera,156,182,4	script	City Crystal#prontera	1914,{
+	mes "[City Crystal]";
+	mes "Travel to another City Crystal for 100 Zeny.";
+	next;
+	.@choice = select("Prontera (Acolyte):Izlude (Swordman):Morroc (Thief):Geffen (Mage):Payon:Archer Village (Archer):Alberta (Merchant):Al De Baran:Amatsu:Ayothaya:Brasilis:Comodo:Einbech:Einbroch:Gonryun:Lighthalzen:Louyang:Moscovia:Niflheim:Umbala:Yuno:Cancel");
+	if (.@choice == 22) close;
+	setarray .@map$[0], "prontera","izlude","morocc","geffen","payon","pay_arche","alberta","aldebaran","amatsu","ayothaya","brasilis","comodo","einbech","einbroch","gonryun","lighthalzen","louyang","moscovia","niflheim","umbala","yuno";
+	setarray .@x[0], 156,127,156,119,178,56,117,146,104,214,199,194,183,244,161,166,212,225,203,86,154;
+	setarray .@y[0], 182,116,94,59,104,123,60,119,149,169,221,150,132,205,122,100,104,191,179,160,187;
+	.@i = .@choice - 1;
+	if (strcharinfo(3) == .@map$[.@i]) {
+		mes "You are already in that city.";
+		close;
+	}
+	if (Zeny < 100) {
+		mes "You need 100 Zeny to travel.";
+		close;
+	}
+	.@landing = .@y[.@i] + 2;
+	if (!checkcell(.@map$[.@i], .@x[.@i], .@landing, cell_chkpass)) {
+		mes "This crystal is currently unavailable.";
+		close;
+	}
+	Zeny -= 100;
+	close2;
+	warp .@map$[.@i], .@x[.@i], .@landing;
+	end;
+}
+izlude,127,116,4	duplicate(City Crystal#prontera)	City Crystal#izlude	1914
+morocc,156,94,4	duplicate(City Crystal#prontera)	City Crystal#morocc	1914
+geffen,119,59,4	duplicate(City Crystal#prontera)	City Crystal#geffen	1914
+payon,178,104,4	duplicate(City Crystal#prontera)	City Crystal#payon	1914
+pay_arche,56,123,4	duplicate(City Crystal#prontera)	City Crystal#pay_arche	1914
+alberta,117,60,4	duplicate(City Crystal#prontera)	City Crystal#alberta	1914
+aldebaran,146,119,4	duplicate(City Crystal#prontera)	City Crystal#aldebaran	1914
+amatsu,104,149,4	duplicate(City Crystal#prontera)	City Crystal#amatsu	1914
+ayothaya,214,169,4	duplicate(City Crystal#prontera)	City Crystal#ayothaya	1914
+brasilis,199,221,4	duplicate(City Crystal#prontera)	City Crystal#brasilis	1914
+comodo,194,150,4	duplicate(City Crystal#prontera)	City Crystal#comodo	1914
+einbech,183,132,4	duplicate(City Crystal#prontera)	City Crystal#einbech	1914
+einbroch,244,205,4	duplicate(City Crystal#prontera)	City Crystal#einbroch	1914
+gonryun,161,122,4	duplicate(City Crystal#prontera)	City Crystal#gonryun	1914
+lighthalzen,166,100,4	duplicate(City Crystal#prontera)	City Crystal#lighthalzen	1914
+louyang,212,104,4	duplicate(City Crystal#prontera)	City Crystal#louyang	1914
+moscovia,225,191,4	duplicate(City Crystal#prontera)	City Crystal#moscovia	1914
+niflheim,203,179,4	duplicate(City Crystal#prontera)	City Crystal#niflheim	1914
+umbala,86,160,4	duplicate(City Crystal#prontera)	City Crystal#umbala	1914
+yuno,154,187,4	duplicate(City Crystal#prontera)	City Crystal#yuno	1914

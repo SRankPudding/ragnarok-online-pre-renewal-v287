@@ -1,0 +1,340 @@
+Header:
+  Type: PET_DB
+  Version: 1
+Body:
+  - Mob: PORING
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DROPS
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: POPORING
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: LUNATIC
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: PICKY
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: CHONCHON
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: STEEL_CHONCHON
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: HUNTER_FLY
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SAVAGE_BABE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DESERT_WOLF_B
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: ROCKER
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SPORE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: POISON_SPORE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: PECOPECO
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SMOKIE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: YOYO
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: ORK_WARRIOR
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: MUNAK
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DOKEBI
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SOHEE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: ISIS
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: PETIT
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DEVIRUCHI
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: BAPHOMET_
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: BON_GUN
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: ZHERLTHSH
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: ALICE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOBLINE_XMAS
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: CHUNG_E
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOBLIN_1
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOBLIN_2
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOBLIN_4
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DELETER_
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DIABOLIC
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: WANDER_MAN
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOLEM
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: MARIONETTE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: MEDUSA
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: WHISPER
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: GOBLIN_LEADER
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SUCCUBUS
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: INCUBUS
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: NIGHTMARE_TERROR
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: SHINOBI
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: MIYABI_NINGYO
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: WICKED_NYMPH
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: STONE_SHOOTER
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: DULLAHAN
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: LOLI_RURI
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: CIVIL_SERVANT
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: LEAF_CAT
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: BACSOJIN_
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: IMP
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: E_HYDRA
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+    SupportScript: >
+      petloot 1;
+  - Mob: EVENT_RICECAKE
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+  - Mob: ECLIPSE_P
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20
+  - Mob: P_CHUNG_E
+    Fullness: 1
+    HungryDelay: 4320
+    HungerIncrease: 20

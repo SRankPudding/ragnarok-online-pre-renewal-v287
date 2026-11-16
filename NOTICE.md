@@ -1,0 +1,9 @@
+# Lizenz und Credits
+
+Der Server basiert auf [rAthena](https://github.com/rathena/rathena/tree/1ca3e7700939ea40120cb51a777f8681ba5e84ae). Der Client basiert auf [roBrowserLegacy](https://github.com/MrAntares/roBrowserLegacy/tree/2ec8f82c8ea77cc3a50b900eb0b71b1cbe34c9a6), das aus [roBrowser](https://github.com/vthibault/roBrowser) hervorgegangen ist. Danke an die ursprünglichen Autorinnen, Autoren und Mitwirkenden. Die GPLv3 liegt in [LICENSE](LICENSE). Hinweise in übernommenem Code und die Lizenzen von Abhängigkeiten gelten weiter.
+
+„Ragnarok Online“ bezeichnet das Spiel. Dieses Hobbyprojekt ist unabhängig von Gravity und den offiziellen Betreibern. Die GPL deckt den Open-Source-Code ab. Für Spieldaten, Originalgrafiken, Musik und andere Inhalte gelten deren jeweilige Rechte. Für eine öffentliche Verteilung dieser Dateien wäre eine eigene Erlaubnis nötig. Das Paket enthält die elf für das Projekt erstellten Titel- und Lademotive. Die Dateien der privaten Spielinstallation, die zusätzliche Titelmusik und die privaten Weltkartenmotive sind separat zu betrachten. [WIPO zu urheberrechtlich geschützten Inhalten](https://www.wipo.int/en/web/copyright/protection)
+
+Wer ausführbare Builds des GPL-Codes verteilt, muss auch die GPL-Hinweise und den entsprechenden Quellcode gemäß der Lizenz verfügbar machen. Dieses Paket enthält ein Quellcode-Overlay und die genaue Upstream-Revision zum Zusammenbauen. Für eine Veröffentlichung bitte ein neu erstelltes Repository auf Basis dieses Ordners verwenden. Alte Git-Historien oder das private Betriebsverzeichnis können persönliche Metadaten enthalten.
+
+Git schreibt Autorname und E-Mail in jeden Commit. Wenn nur dein GitHub-Name sichtbar sein soll, setze vor dem ersten Commit im neuen Repository `git config user.name` auf deinen GitHub-Namen und `git config user.email` auf deine GitHub-Noreply-Adresse. Prüfe die Einträge mit `git log -1 --format="%an <%ae> | %cn <%ce>"`. Die ZIP enthält keine Git-Historie.

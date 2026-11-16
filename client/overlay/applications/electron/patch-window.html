@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+	<title>Ragnarok Online – Pre-Renewal</title>
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; min-height: 100vh; display: grid; place-items: center; color: #eee7dc; background: radial-gradient(ellipse at top, #39304a, #151421 70%); font: 14px system-ui, sans-serif; }
+		main { width: min(360px, 90vw); }
+		header { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+		img { width: 48px; height: 48px; object-fit: contain; }
+		h1 { margin: 0; font: 25px Georgia, serif; color: #f1d79b; }
+		p { margin: 4px 0 0; }
+		progress { width: 100%; height: 10px; margin-top: 12px; appearance: none; }
+		progress::-webkit-progress-bar { background: #393448; border-radius: 6px; }
+		progress::-webkit-progress-value { background: #e8b84b; border-radius: 6px; }
+		#detail { color: #d0c4d7; font-variant-numeric: tabular-nums; min-height: 20px; }
+	</style>
+</head>
+<body>
+	<main>
+		<header><img src="icon.png" alt=""><div><h1>Ragnarok Online</h1><p>Pre-Renewal</p></div></header>
+		<p id="status" role="status">Updates werden geprüft …</p>
+		<progress id="bar" aria-label="Download-Fortschritt" max="100" value="0" hidden></progress>
+		<p id="detail"></p>
+	</main>
+	<script>
+		const status = document.querySelector('#status');
+		const bar = document.querySelector('#bar');
+		const detail = document.querySelector('#detail');
+		const mb = new Intl.NumberFormat('de-AT', { maximumFractionDigits: 2 });
+		window.showPatchStatus = ({ phase, version, bytes, total }) => {
+			const patch = version ? 'Patch v' + version : '';
+			bar.hidden = phase !== 'downloading';
+			detail.textContent = '';
+			if (phase === 'downloading') {
+				const percent = total ? Math.floor(100 * bytes / total) : 100;
+				status.textContent = patch + ' wird geladen';
+				bar.value = percent;
+				detail.textContent = percent + ' % · ' + mb.format(bytes / 1e6) + ' / ' + mb.format(total / 1e6) + ' MB';
+			} else if (phase === 'current') {
+				status.textContent = patch + ' · Aktuell';
+			} else if (phase === 'failed') {
+				status.textContent = 'Update-Prüfung oder Download fehlgeschlagen';
+				detail.textContent = patch ? 'Starte mit ' + patch : 'Spiel wird gestartet';
+			}
+		};
+	</script>
+</body>
+</html>

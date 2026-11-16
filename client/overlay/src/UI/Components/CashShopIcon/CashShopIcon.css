@@ -1,0 +1,23 @@
+:host {
+	width: 88px;
+	height: 30px;
+	right: 12px;
+	top: 46px;
+}
+
+#CashShopIcon {
+	position: absolute;
+	width: 88px;
+	height: 30px;
+}
+
+#CashShopIcon .cashshop-icon {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #755220;
+	border-radius: 5px;
+	background: linear-gradient(#403354, #221b33);
+	color: #ffdda0;
+	font: 700 13px "Segoe UI", sans-serif;
+	cursor: pointer;
+}

@@ -1,0 +1,25 @@
+-	script	HoldToSprint	-1,{
+OnInit:
+	bindatcmd "rosprint", strnpcinfo(3) + "::OnSprint", 0, 100;
+	end;
+
+OnSprint:
+	if (.@atcmd_numparameters != 1)
+		end;
+	.@owned = getstatus(SC_WALKSPEED, 4) == 150650;
+	if (.@atcmd_parameters$[0] == "off") {
+		if (.@owned)
+			sc_end SC_WALKSPEED;
+		end;
+	}
+	if (.@atcmd_parameters$[0] != "on" || (getstatus(SC_WALKSPEED) && !.@owned) || Hp <= 0)
+		end;
+	sc_start4 SC_WALKSPEED, 1800, 150, 0, 0, 150650;
+	end;
+
+OnPCLoginEvent:
+OnPCLogoutEvent:
+	if (getstatus(SC_WALKSPEED, 4) == 150650)
+		sc_end SC_WALKSPEED;
+	end;
+}

@@ -1,0 +1,126 @@
+Header:
+  Type: QUEST_DB
+  Version: 3
+
+Body:
+  - Id: 65000
+    Title: "Shadows of Rune-Midgarts: Tracks in the Sand"
+    Targets:
+      - Mob: DROPS
+        Count: 12
+  - Id: 65001
+    Title: "Shadows of Rune-Midgarts: A Sample for the Guild"
+  - Id: 65002
+    Title: "Shadows of Rune-Midgarts: Report to Morroc"
+  - Id: 65003
+    Title: "Shadows of Rune-Midgarts: Beneath the Sand"
+    Targets:
+      - Mob: FARMILIAR
+        Count: 10
+      - Mob: POPORING
+        Count: 10
+  - Id: 65004
+    Title: "Shadows of Rune-Midgarts: A Letter for Payon"
+  - Id: 65005
+    Title: "Shadows of Rune-Midgarts: The Bell Below"
+    Targets:
+      - Mob: ZOMBIE
+        Count: 10
+      - Mob: SKELETON
+        Count: 10
+  - Id: 65006
+    Title: "Shadows of Rune-Midgarts: The Geffen Connection"
+  - Id: 65007
+    Title: "Shadows of Rune-Midgarts: Spores Beneath the Tower"
+    Targets:
+      - Mob: POISON_SPORE
+        Count: 12
+  - Id: 65008
+    Title: "How to Get a Pet"
+  - Id: 65009
+    Title: "Shadows of Rune-Midgarts: Threads in the Hills"
+    Targets:
+      - Mob: MANTIS
+        Count: 10
+      - Mob: ARGOS
+        Count: 10
+  - Id: 65010
+    Title: "Six Cities: South Gate Patrol"
+    Targets:
+      - Mob: PORING
+        Count: 12
+      - Mob: LUNATIC
+        Count: 10
+  - Id: 65011
+    Title: "Six Cities: Under the Capital"
+    Targets:
+      - Mob: THIEF_BUG
+        Count: 12
+      - Mob: TAROU
+        Count: 10
+  - Id: 65012
+    Title: "Six Cities: Soundings at Byalan"
+    Targets:
+      - Mob: PLANKTON
+        Count: 12
+      - Mob: MARINA
+        Count: 10
+  - Id: 65013
+    Title: "Six Cities: Cargo Below Deck"
+    Targets:
+      - Mob: KUKRE
+        Count: 10
+      - Mob: PIRATE_SKEL
+        Count: 10
+  - Id: 65014
+    Title: "Ready for the Depths"
+  - Id: 65015
+    Title: "A Lesson in Enchanting"
+  - Id: 65016
+    Title: "First Stat Point"
+  - Id: 65017
+    Title: "The Road Beyond Level 50"
+  - Id: 65018
+    Title: "Choose Your Second Job"
+  - Id: 65019
+    Title: "World Journey: Survey the Desert Roads"
+    Targets:
+      - Mob: SAND_MAN
+        Count: 12
+      - Mob: MUMMY
+        Count: 10
+  - Id: 65020
+    Title: "World Journey: The Hills of Juno"
+    Targets:
+      - Mob: GOAT
+        Count: 12
+      - Mob: BLAZZER
+        Count: 10
+  - Id: 65021
+    Title: "World Journey: Winds of Rachel"
+    Targets:
+      - Mob: HILL_WIND_1
+        Count: 15
+      - Mob: SIROMA
+        Count: 12
+  - Id: 65022
+    Title: "World Journey: From Veins to the Sphinx"
+    Targets:
+      - Mob: STAPO
+        Count: 15
+      - Mob: PASANA
+        Count: 12
+  - Id: 65023
+    Title: "World Journey: Echoes of Glast Heim"
+    Targets:
+      - Mob: WRAITH
+        Count: 15
+      - Mob: RAYDRIC
+        Count: 12
+  - Id: 65024
+    Title: "World Journey: The Frozen Frontier"
+    Targets:
+      - Mob: DULLAHAN
+        Count: 15
+      - Mob: ICE_TITAN
+        Count: 12

@@ -1,0 +1,10 @@
+[Unit]
+Description=Poll RO Community registrations
+
+[Timer]
+OnBootSec=30
+OnUnitInactiveSec=15
+AccuracySec=1
+
+[Install]
+WantedBy=timers.target

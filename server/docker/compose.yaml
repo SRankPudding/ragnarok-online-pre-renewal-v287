@@ -1,0 +1,100 @@
+name: ragnarok
+
+x-rathena: &rathena
+  image: "${RATHENA_IMAGE:?Set the image built from the selected rAthena revision}"
+  working_dir: /opt/rathena
+  init: true
+  restart: unless-stopped
+  volumes:
+    - type: bind
+      source: ../runtime/rathena-import
+      target: /opt/rathena/conf/import
+      read_only: true
+      bind:
+        create_host_path: false
+  networks:
+    - game
+    - database
+
+services:
+  db:
+    image: "${MARIADB_IMAGE:?Set the pinned MariaDB image}"
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_HOST: localhost
+      MARIADB_DATABASE: ragnarok
+      MARIADB_USER: rathena
+      MARIADB_PASSWORD_FILE: /run/secrets/db_password
+      MARIADB_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+    secrets:
+      - db_password
+      - db_root_password
+    volumes:
+      - mariadb:/var/lib/mysql
+      - type: bind
+        source: ../runtime/db-init
+        target: /docker-entrypoint-initdb.d
+        read_only: true
+        bind:
+          create_host_path: false
+    networks:
+      - database
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+  login:
+    <<: *rathena
+    command: ["./login-server"]
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${RO_LAN_IP:?Set the VM LAN IPv4 address}:6900:6900/tcp"
+  char:
+    <<: *rathena
+    command: ["./char-server"]
+    depends_on:
+      db:
+        condition: service_healthy
+      login:
+        condition: service_started
+    ports:
+      - "${RO_LAN_IP:?Set the VM LAN IPv4 address}:6121:6121/tcp"
+  map:
+    <<: *rathena
+    command: ["./map-server"]
+    volumes:
+      - ../runtime/rathena-import:/opt/rathena/conf/import:ro
+      - ../game-db/job_stats.yml:/opt/rathena/db/pre-re/job_stats.yml:ro
+      - ../game-db/quest_db.yml:/opt/rathena/db/import/quest_db.yml:ro
+      - ../game-db/pet_db.yml:/opt/rathena/db/import/pet_db.yml:ro
+      - ../game-db/map_drops.yml:/opt/rathena/db/import/map_drops.yml:ro
+      - ../game-db/item_db.yml:/opt/rathena/db/import/item_db.yml:ro
+      - ../game-db/item_cash.yml:/opt/rathena/db/import/item_cash.yml:ro
+      - ../npc/kafras.txt:/opt/rathena/npc/kafras/kafras.txt:ro
+      - ../npc/patched-shared.txt:/opt/rathena/npc/merchants/shops.txt:ro
+      - ../npc/patched-pre-re.txt:/opt/rathena/npc/pre-re/merchants/shops.txt:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      char:
+        condition: service_started
+    ports:
+      - "${RO_LAN_IP:?Set the VM LAN IPv4 address}:5121:5121/tcp"
+
+networks:
+  game:
+  database:
+    internal: true
+
+volumes:
+  mariadb:
+
+secrets:
+  db_password:
+    file: ../secrets/db_password
+  db_root_password:
+    file: ../secrets/db_root_password

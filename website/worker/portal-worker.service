@@ -1,0 +1,20 @@
+[Unit]
+Description=RO Community account registration
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ragnarok-portal
+Group=ragnarok-portal
+RuntimeDirectory=ragnarok-portal
+RuntimeDirectoryMode=0700
+ExecStartPre=+/bin/sh -c '/usr/bin/docker inspect --format "{{.NetworkSettings.Networks.ragnarok_database.IPAddress}}" ragnarok-db-1 > /run/ragnarok-portal/database-host && chmod 0644 /run/ragnarok-portal/database-host'
+ExecStart=/usr/bin/python3 /usr/local/lib/ragnarok-portal/worker.py /etc/ragnarok-portal/config.json
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+TimeoutStartSec=60

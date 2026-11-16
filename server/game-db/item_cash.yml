@@ -1,0 +1,283 @@
+Header:
+  Type: ITEM_CASH_DB
+  Version: 1
+
+Body:
+  - Tab: New
+    Items:
+      - Item: Inventory_Ex
+        Price: 1
+      - Item: Inventory_Ex_Dis
+        Price: 1
+      - Item: Inventory_Ex_Evt
+        Price: 1
+      - Item: Battle_Manual
+        Price: 1
+      - Item: Bubble_Gum
+        Price: 1
+      - Item: Insurance
+        Price: 1
+      - Item: Kafra_Card
+        Price: 1
+      - Item: Giant_Fly_Wing
+        Price: 1
+      - Item: Neuralizer
+        Price: 1
+  - Tab: Hot
+    Items:
+      - Item: Poring_Hat
+        Price: 1
+      - Item: Bunny_Band
+        Price: 1
+      - Item: Magni_Cap
+        Price: 1
+      - Item: Valkyrie_Helm
+        Price: 1
+      - Item: Orleans_Gown
+        Price: 1
+      - Item: Oridecon
+        Price: 1
+      - Item: Elunium
+        Price: 1
+      - Item: Enriched_Oridecon
+        Price: 1
+      - Item: Enriched_Elunium
+        Price: 1
+  - Tab: Permanent
+    Items:
+      - Item: Valkyrie_Helm
+        Price: 1
+      - Item: Valkyrie_Armor
+        Price: 1
+      - Item: Valkyrie_Manteau
+        Price: 1
+      - Item: Valkyrie_Shoes
+        Price: 1
+      - Item: Valkyrja's_Shield
+        Price: 1
+      - Item: Morrigane's_Helm
+        Price: 1
+      - Item: Morrigane's_Manteau
+        Price: 1
+      - Item: Morrigane's_Belt
+        Price: 1
+      - Item: Morrigane's_Pendant
+        Price: 1
+      - Item: Goibne's_Helmet
+        Price: 1
+      - Item: Goibne's_Armor
+        Price: 1
+      - Item: Goibne's_Shoulder_Arms
+        Price: 1
+      - Item: Goibne's_Combat_Boots
+        Price: 1
+      - Item: Magni_Cap
+        Price: 1
+      - Item: Odin's_Blessing
+        Price: 1
+      - Item: Stone_Buckler
+        Price: 1
+      - Item: Orleans_Gown
+        Price: 1
+      - Item: Orleans_Server
+        Price: 1
+      - Item: Orleans_Glove
+        Price: 1
+  - Tab: Other
+    Items:
+      - Item: T_Mr_Smile
+        Price: 1
+      - Item: T_Spinx_Helm
+        Price: 1
+      - Item: T_Sunglasses
+        Price: 1
+      - Item: T_Cigarette
+        Price: 1
+      - Item: T_Valkyrie_Feather_Band
+        Price: 1
+      - Item: Fine_Sun
+        Price: 1
+      - Item: C_Angelic_Chain
+        Price: 1
+      - Item: C_Samurai_Mask
+        Price: 1
+      - Item: C_Ear_Of_Black_Cat
+        Price: 1
+      - Item: C_Mask_Of_Fox
+        Price: 1
+      - Item: C_Bunny_Band
+        Price: 1
+      - Item: C_White_Baby_Cat_Ears
+        Price: 1
+      - Item: C_Gothic_Head_Dress
+        Price: 1
+      - Item: C_Panda_Cap
+        Price: 1
+      - Item: C_Sakura_Coronet
+        Price: 1
+      - Item: C_Rabbit_Ear_Hat
+        Price: 1
+      - Item: C_Black_Bunny_Band
+        Price: 1
+      - Item: C_Black_Cat_Hat
+        Price: 1
+      - Item: C_Gothic_Heart_Wing
+        Price: 1
+      - Item: C_Black_Cat_Ears_Beret
+        Price: 1
+      - Item: C_Cherry_Blossom_Hat
+        Price: 1
+      - Item: C_Steampunk_Hat
+        Price: 1
+      - Item: C_Black_Witch_Hat
+        Price: 1
+      - Item: C_Niflheim_Bunny_Hat
+        Price: 1
+      - Item: C_Cat_Ears_Cape
+        Price: 1
+      - Item: C_Cat_Ear_Hat
+        Price: 1
+      - Item: C_GreatDevilWing
+        Price: 1
+      - Item: C_Fallen_Angel_Wing
+        Price: 1
+      - Item: C_Archangel_Wing
+        Price: 1
+      - Item: C_Flying_Angel_J
+        Price: 1
+  - Tab: Limited
+    Items:
+      - Item: Santa's_Hat
+        Price: 1
+      - Item: Anniversary_Ring
+        Price: 1
+      - Item: 5_Anniversary_Coin
+        Price: 1
+      - Item: Pumpkin_Hat
+        Price: 1
+      - Item: Santa's_Hat_
+        Price: 1
+      - Item: Pumpkin_Hat_
+        Price: 1
+      - Item: Event_Pierrot_Nose
+        Price: 1
+      - Item: Pumpkin_Hat_H
+        Price: 1
+      - Item: Santa_Poring_Hat
+        Price: 1
+      - Item: Santa_Hat_1
+        Price: 1
+      - Item: Santa_Hat_2
+        Price: 1
+      - Item: Valentine_Hat
+        Price: 1
+      - Item: J_Anniversary_Hat
+        Price: 1
+      - Item: J_Twin_Santahat
+        Price: 1
+      - Item: Weird_Pumpkin_Hat
+        Price: 1
+      - Item: Rudolf_Santa_Hat
+        Price: 1
+      - Item: Santa_Beard
+        Price: 1
+      - Item: Valentine_Pledge
+        Price: 1
+      - Item: Santa_Goblin_Egg
+        Price: 1
+      - Item: Wit_Pumpkin_Hat
+        Price: 1
+      - Item: Pumpkin_Head
+        Price: 1
+      - Item: Cookie_XMAS_Card
+        Price: 1
+      - Item: Pumpkin_Pie_
+        Price: 1
+      - Item: Chocolate_Of_Eternity
+        Price: 1
+      - Item: Plain_Chocolate
+        Price: 1
+      - Item: Pumpkin_Head_Crushed
+        Price: 1
+      - Item: XMAS_Coupon
+        Price: 1
+      - Item: Pumpkin_Bucket
+        Price: 1
+      - Item: Anniversary_Ticket
+        Price: 1
+      - Item: Pumpkin_Mojo
+        Price: 1
+      - Item: Halloween_Ticket
+        Price: 1
+      - Item: Valentine_Gold_Ring
+        Price: 1
+      - Item: Valentine_Silver_Ring
+        Price: 1
+      - Item: Pumpkin
+        Price: 1
+      - Item: Chocolate
+        Price: 1
+      - Item: HandMade_Chocolate
+        Price: 1
+      - Item: HandMade_Chocolate_
+        Price: 1
+      - Item: White_Chocolate
+        Price: 1
+      - Item: Chocolate_Drink
+        Price: 1
+      - Item: Pumpkin_Pie
+        Price: 1
+      - Item: Event_Cake
+        Price: 1
+      - Item: Chocolate_Pie
+        Price: 1
+      - Item: J_Firecracker
+        Price: 1
+      - Item: Xmas_Gift
+        Price: 1
+      - Item: Couple_Event_Basket
+        Price: 1
+      - Item: Easter_Scroll
+        Price: 1
+      - Item: Valentine_Gift_Box1
+        Price: 1
+      - Item: Valentine_Gift_Box2
+        Price: 1
+      - Item: 5_Anniversary_Coin_Box
+        Price: 1
+      - Item: Fire_Cracker_Xmas_Box
+        Price: 1
+      - Item: Santa_Poring_Hat_Box
+        Price: 1
+      - Item: Xmas_Pet_Scroll
+        Price: 1
+      - Item: Valentine_Scroll_TW
+        Price: 1
+      - Item: F_Santa_Poring_Hat_Box
+        Price: 1
+      - Item: Valentine_Pledge_Box
+        Price: 1
+      - Item: Fire_Cracker_Xmas
+        Price: 1
+  - Tab: Consumables
+    Items:
+      - Item: Red_Potion
+        Price: 1
+      - Item: White_Potion
+        Price: 1
+      - Item: Blue_Potion
+        Price: 1
+      - Item: Yggdrasilberry
+        Price: 1
+      - Item: Wing_Of_Fly
+        Price: 1
+      - Item: Wing_Of_Butterfly
+        Price: 1
+      - Item: Seed_Of_Yggdrasil
+        Price: 1
+      - Item: Small_Life_Potion
+        Price: 1
+      - Item: Guyak_Pudding
+        Price: 1
+      - Item: Token_Of_Siegfried_Box
+        Price: 1
