@@ -25,4 +25,6 @@
 
 ## Known limits
 
+The original setup used Thai-language game assets. Many client strings were translated into English, but some interface labels and content loaded from game assets may still appear in Thai or be only partially translated.
+
 Scripted quest objectives without structured data rely on the existing quest description. The six world hunts are included. Separate non-combat exploration quests and milestone class sets were unfinished. Private music and additional world map illustrations are excluded from the source package.

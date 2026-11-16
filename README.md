@@ -12,3 +12,5 @@ An unofficial fan project for classic Ragnarok Online. Built for a small group o
 | [Account website](website/) | Optional template for portal login, game account registration, and downloads |
 
 The server uses Pre-Renewal with **packet version 20211103**. The client overlay is **v2.87**. Both can be configured for your own server. This package provides source code and templates. Obtain the game assets separately from a source you have the right to use.
+
+**Client language.** The client has been extensively modified and translated from a Thai-language setup into English. The translation is incomplete. Some quest text, NPC dialogue, item or skill descriptions, and interface labels may still appear in Thai or use the wording from your game assets.
