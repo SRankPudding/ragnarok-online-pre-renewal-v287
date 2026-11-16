@@ -6,7 +6,7 @@ async function update() {
 	try {
 		const response = await fetch('/?status=1', { cache: 'no-store' });
 		if (response.status === 403) {
-			online.textContent = 'Sitzung abgelaufen. Bitte melde dich erneut an.';
+			online.textContent = 'Your session expired. Please sign in again.';
 			list.replaceChildren();
 			return;
 		}
@@ -17,7 +17,7 @@ async function update() {
 			notice.dataset.status = registration.status;
 		}
 		const count = roster.players.filter(player => player.online).length;
-		online.textContent = roster.available ? `${count} online · ${roster.players.length} registriert` : 'Onlinestatus gerade nicht verfügbar.';
+		online.textContent = roster.available ? `${count} online · ${roster.players.length} registered` : 'Player status is currently unavailable.';
 		list.replaceChildren(...roster.players.map(player => {
 			const row = document.createElement('li');
 			const state = document.createElement('span');
@@ -27,7 +27,7 @@ async function update() {
 			return row;
 		}));
 	} catch {
-		online.textContent = 'Onlinestatus gerade nicht verfügbar.';
+		online.textContent = 'Player status is currently unavailable.';
 		list.replaceChildren();
 	}
 	setTimeout(update, notice.dataset.status === 'pending' ? 4000 : 20000);

@@ -55,17 +55,17 @@ function registrationStatus(string $id): array
     $job = $query->fetch();
     if (!$job) return ['status' => '', 'message' => ''];
     return ['status' => $job['status'], 'message' => match ($job['status']) {
-        'created' => 'Registrierung erfolgreich. Dein Spielkonto „' . $job['username'] . '“ ist bereit.',
-        'taken' => 'Dieser Spielname ist auf dem Spielserver bereits vergeben.',
-        'expired' => 'Der Spielserver hat die Anfrage nicht rechtzeitig abgeholt. Bitte versuche es erneut.',
-        default => 'Deine Anfrage wartet auf den Spielserver.',
+        'created' => 'Registration successful. Your game account “' . $job['username'] . '” is ready.',
+        'taken' => 'That username is already taken.',
+        'expired' => 'The game server did not process the request in time. Please try again.',
+        default => 'Your request is waiting for the game server.',
     }];
 }
 
 function downloadClient(string $path): never
 {
     $file = is_readable($path) ? fopen($path, 'rb') : false;
-    if ($file === false) stop(404, 'Der Client-Download ist noch nicht verfügbar.');
+    if ($file === false) stop(404, 'The client download is not available yet.');
     session_write_close();
     $size = fstat($file)['size'];
     $start = 0;
@@ -74,7 +74,7 @@ function downloadClient(string $path): never
     if ($range !== '') {
         if (!preg_match('/\Abytes=(\d*)-(\d*)\z/', $range, $parts) || ($parts[1] === '' && $parts[2] === '')) {
             header("Content-Range: bytes */$size");
-            stop(416, 'Ungültiger Downloadbereich.');
+            stop(416, 'Invalid download range.');
         }
         if ($parts[1] === '') {
             $start = max(0, $size - (int)$parts[2]);
@@ -84,7 +84,7 @@ function downloadClient(string $path): never
         }
         if ($start > $end) {
             header("Content-Range: bytes */$size");
-            stop(416, 'Ungültiger Downloadbereich.');
+            stop(416, 'Invalid download range.');
         }
         http_response_code(206);
         header("Content-Range: bytes $start-$end/$size");
@@ -114,15 +114,15 @@ function bridge(array $settings, string $action): never
     $auth = $_SERVER['HTTP_AUTHORIZATION'] ?? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] ?? '';
     $token = str_starts_with($auth, 'Bearer ') ? substr($auth, 7) : '';
     if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !hash_equals($settings['bridge_token_hash'], hash('sha256', $token))) {
-        stop(403, 'Zugriff verweigert.');
+        stop(403, 'Access denied.');
     }
     if ($action === 'roster') {
         $players = json_decode(file_get_contents('php://input', length: 100000), true);
-        if (!is_array($players) || !array_is_list($players) || count($players) > 1000) stop(400, 'Ungültige Spielerliste.');
+        if (!is_array($players) || !array_is_list($players) || count($players) > 1000) stop(400, 'Invalid player list.');
         foreach ($players as &$player) {
             if (!is_array($player) || !is_string($player['username'] ?? null) ||
                 strlen($player['username']) > 96 || !is_bool($player['online'] ?? null)) {
-                stop(400, 'Ungültiger Spielereintrag.');
+                stop(400, 'Invalid player entry.');
             }
             $player = ['username' => $player['username'], 'online' => $player['online']];
         }
@@ -130,7 +130,7 @@ function bridge(array $settings, string $action): never
         $snapshot = json_encode(['updated' => time(), 'players' => $players], JSON_THROW_ON_ERROR);
         $temp = tempnam(PORTAL_PRIVATE, 'roster-');
         if ($temp === false || file_put_contents($temp, $snapshot) === false ||
-            !rename($temp, PORTAL_PRIVATE . '/roster.json')) stop(500, 'Spielerliste konnte nicht gespeichert werden.');
+            !rename($temp, PORTAL_PRIVATE . '/roster.json')) stop(500, 'Unable to save the player list.');
         jsonResponse(['ok' => true]);
     }
     $db = database('portal.sqlite');
@@ -140,13 +140,13 @@ function bridge(array $settings, string $action): never
         jsonResponse(['job' => $job ?: null]);
     }
     if ($action !== 'finish') {
-        stop(404, 'Unbekannte Aktion.');
+        stop(404, 'Unknown action.');
     }
     $body = json_decode(file_get_contents('php://input', length: 2048), true);
     $id = is_array($body) ? ($body['id'] ?? null) : null;
     $status = is_array($body) ? ($body['status'] ?? null) : null;
     if (!is_string($id) || !preg_match('/\A[a-f0-9]{32}\z/', $id) || !in_array($status, ['created', 'taken'], true)) {
-        stop(400, 'Ungültiges Ergebnis.');
+        stop(400, 'Invalid result.');
     }
     $finish = $db->prepare("UPDATE jobs SET status=?, password_box=NULL WHERE id=? AND status='pending'");
     $finish->execute([$status, $id]);
@@ -224,8 +224,8 @@ $downloadPath = PORTAL_PRIVATE . '/client-source.zip';
 $registration = ['status' => '', 'message' => ''];
 
 if (isset($_GET['download']) || isset($_GET['status'])) {
-    if (!$signedIn) stop(403, 'Bitte zuerst anmelden.');
-    if (!in_array($_SERVER['REQUEST_METHOD'], ['GET', 'HEAD'], true)) stop(405, 'Methode nicht erlaubt.');
+    if (!$signedIn) stop(403, 'Please sign in first.');
+    if (!in_array($_SERVER['REQUEST_METHOD'], ['GET', 'HEAD'], true)) stop(405, 'Method not allowed.');
     if (isset($_GET['download'])) downloadClient($downloadPath);
     jsonResponse(['registration' => registrationStatus($_SESSION['last_job'] ?? ''), 'roster' => roster()]);
 }
@@ -233,7 +233,7 @@ if (isset($_GET['download']) || isset($_GET['status'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $csrf = $_POST['csrf'] ?? null;
     if (!is_string($csrf) || !hash_equals($_SESSION['csrf'], $csrf)) {
-        stop(403, 'Sitzung ungültig. Bitte lade die Seite neu.');
+        stop(403, 'Invalid session. Please reload the page.');
     }
     $action = $_POST['action'] ?? null;
     $name = is_string($_POST['username'] ?? null) ? trim($_POST['username']) : '';
@@ -243,7 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $key = hash_hmac('sha256', $ip, $settings['attempt_key']);
         if (!reserveLoginAttempt($db, $key)) {
             http_response_code(429);
-            $message = 'Zu viele Anmeldeversuche. Versuche es in 15 Minuten erneut.';
+            $message = 'Too many sign-in attempts. Try again in 15 minutes.';
         } else {
             $validPassword = strlen($password) <= 128 && password_verify($password, $settings['portal_password_hash']);
             if ($validPassword && hash_equals($settings['portal_username'], $name)) {
@@ -253,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: /', true, 303);
                 exit;
             }
-            $message = 'Benutzername oder Passwort stimmt nicht.';
+            $message = 'Incorrect username or password.';
         }
     } elseif ($action === 'logout' && $signedIn) {
         $_SESSION = [];
@@ -262,14 +262,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     } elseif ($action === 'register' && $signedIn) {
         if (!preg_match('/\A[a-zA-Z0-9_]{4,23}\z/', $name) || !preg_match('/\A[!-~]{12,23}\z/', $password)) {
-            $message = 'Prüfe Spielnamen und Passwort anhand der Vorgaben unter den Feldern.';
+            $message = 'Check the username and password requirements below the fields.';
         } else {
             $result = registerAccount(database('portal.sqlite'), $settings, strtolower($name), $password);
             if ($result === 'limit') {
                 http_response_code(429);
-                $message = 'In den letzten 60 Minuten wurden bereits zehn Anfragen angenommen. Versuche es später erneut.';
+                $message = 'Ten requests have already been accepted in the past hour. Try again later.';
             } elseif ($result === 'taken') {
-                $message = 'Dieser Spielname ist bereits reserviert. Wähle bitte einen anderen.';
+                $message = 'That username is reserved. Choose a different one.';
             } else {
                 $_SESSION['last_job'] = $result;
                 header('Location: /', true, 303);
@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     } else {
-        stop(400, 'Ungültige Anfrage.');
+        stop(400, 'Invalid request.');
     }
 }
 
@@ -292,54 +292,54 @@ function escape(string $text): string
 }
 ?>
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= $signedIn ? 'Ragnarok Online – Pre-Renewal | RO Community' : 'Privater Zugang | RO Community' ?></title>
+  <title><?= $signedIn ? 'Ragnarok Online – Pre-Renewal | RO Community' : 'Private access | RO Community' ?></title>
   <link rel="stylesheet" href="/portal.css?v=4">
-  <?php if ($signedIn): ?><script src="/portal.js?v=1" defer></script><?php endif; ?>
+  <?php if ($signedIn): ?><script src="/portal.js?v=2" defer></script><?php endif; ?>
 </head>
 <body>
   <main<?= $signedIn ? ' class="signed-in"' : '' ?>>
     <div class="portal-card registration">
       <p class="brand">RO Community</p>
       <div class="crest" aria-hidden="true">✦</div>
-      <h1><?= $signedIn ? 'Ragnarok Online' : 'Privater Zugang' ?></h1>
-      <p class="intro"><?= $signedIn ? 'Erstelle dein Spielkonto für unsere Pre-Renewal-Welt.' : 'Melde dich mit deinem Portalzugang an.' ?></p>
+      <h1><?= $signedIn ? 'Ragnarok Online' : 'Private access' ?></h1>
+      <p class="intro"><?= $signedIn ? 'Create your game account for our Pre-Renewal world.' : 'Sign in with your portal account.' ?></p>
       <p class="notice" id="registration-notice" role="status" data-status="<?= escape($registration['status']) ?>" <?= $message === '' ? 'hidden' : '' ?>><?= escape($message) ?></p>
       <form method="post">
         <input type="hidden" name="csrf" value="<?= escape($_SESSION['csrf']) ?>">
         <input type="hidden" name="action" value="<?= $signedIn ? 'register' : 'login' ?>">
-        <label for="username"><?= $signedIn ? 'Spielname' : 'Benutzername' ?></label>
+        <label for="username"><?= $signedIn ? 'Game username' : 'Username' ?></label>
         <input id="username" name="username" required autocomplete="username" maxlength="<?= $signedIn ? 23 : 64 ?>" <?= $signedIn ? 'minlength="4" pattern="[A-Za-z0-9_]+" aria-describedby="name-help"' : '' ?>>
-        <?php if ($signedIn): ?><small id="name-help">4–23 Zeichen. Buchstaben, Zahlen und Unterstrich.</small><?php endif; ?>
-        <label for="password"><?= $signedIn ? 'Spielpasswort' : 'Passwort' ?></label>
+        <?php if ($signedIn): ?><small id="name-help">4–23 characters. Letters, numbers, and underscores.</small><?php endif; ?>
+        <label for="password"><?= $signedIn ? 'Game password' : 'Password' ?></label>
         <input id="password" name="password" type="password" required autocomplete="<?= $signedIn ? 'new-password' : 'current-password' ?>" maxlength="<?= $signedIn ? 23 : 128 ?>" <?= $signedIn ? 'minlength="12" aria-describedby="password-help"' : '' ?>>
-        <?php if ($signedIn): ?><small id="password-help">12–23 Zeichen ohne Leerzeichen oder Umlaute.</small><?php endif; ?>
-        <button><?= $signedIn ? 'Spielkonto erstellen' : 'Anmelden' ?></button>
+        <?php if ($signedIn): ?><small id="password-help">12–23 printable ASCII characters, excluding spaces.</small><?php endif; ?>
+        <button><?= $signedIn ? 'Create game account' : 'Sign in' ?></button>
       </form>
     </div>
     <?php if ($signedIn): ?>
       <section class="portal-card community">
-        <h2>Windows-Client</h2>
+        <h2>Windows client</h2>
         <?php if (is_readable($downloadPath)): ?>
-          <a class="download" href="/?download=1">Client-Quellcode herunterladen</a>
-          <small>Quellcode-ZIP · <?= number_format(filesize($downloadPath) / 1e9, 1, ',', '.') ?> GB</small>
+          <a class="download" href="/?download=1">Download client source</a>
+          <small>Source ZIP · <?= number_format(filesize($downloadPath) / 1e9, 1, '.', ',') ?> GB</small>
           <?php if (is_readable(PORTAL_PRIVATE . '/client-source.sha256')): ?>
-            <details class="checksum"><summary>SHA-256-Prüfsumme</summary>
+            <details class="checksum"><summary>SHA-256 checksum</summary>
               <code><?= escape(trim(file_get_contents(PORTAL_PRIVATE . '/client-source.sha256'))) ?></code>
             </details>
           <?php endif; ?>
         <?php else: ?>
-          <p>Der Download wird vorbereitet.</p>
+          <p>The download is not available yet.</p>
         <?php endif; ?>
-        <h2>Spieler</h2>
-        <p id="online-count" role="status">Onlinestatus wird geladen …</p>
+        <h2>Players</h2>
+        <p id="online-count" role="status">Loading player status…</p>
         <ul id="players"></ul>
         <form method="post" class="logout">
           <input type="hidden" name="csrf" value="<?= escape($_SESSION['csrf']) ?>">
-          <button name="action" value="logout">Abmelden</button>
+          <button name="action" value="logout">Sign out</button>
         </form>
       </section>
     <?php endif; ?>

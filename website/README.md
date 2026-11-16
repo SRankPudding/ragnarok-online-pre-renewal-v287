@@ -1,19 +1,19 @@
-# Optionale Account-Website
+# Optional account website
 
-Die Website stellt einen geschützten Zugang, Spielkonto-Erstellung und den Status der Registrierung bereit. Nach der Portal-Anmeldung kann sie die Spielerliste und einen bereitgestellten Quellcode-Download anzeigen. Standardmäßig sind Datenbank und Warteschlange leer. Auf der Website kommen keine direkten Datenbankzugänge zum Spielserver zum Einsatz.
+The website provides an access-controlled portal, game account registration, and registration status. After login, it can also show the player roster and an optional source-code download. The database and registration queue start empty. A worker on the game server processes registrations, so the website does not need direct access to the game database.
 
-## Webroot und Zugang einrichten
+## Setup
 
-1. Installiere PHP 8.1 oder neuer mit PDO SQLite und Sodium. Konfiguriere HTTPS und setze den Dokumentenstamm auf `website/public/`. `RO_PORTAL_PRIVATE` muss in der PHP-Umgebung auf dein Verzeichnis außerhalb des Webroots zeigen. Die Apache-Datei `.htaccess` setzt die Startseite und reicht den Authorization-Header weiter. Bei Nginx oder PHP-FPM muss der Header ebenfalls an PHP gelangen.
-2. Erzeuge das Portal-Konto und die lokalen Schlüssel außerhalb des Webroots. Verwende deine eigene Domain.
+1. Install PHP 8.1 or later with PDO SQLite and Sodium. Enable HTTPS and set the document root to `website/public/`. Set `RO_PORTAL_PRIVATE` in PHP's environment to a new directory outside the document root. The supplied Apache `.htaccess` sets the entry point and forwards the Authorization header. Configure equivalent forwarding if you use Nginx or PHP-FPM.
+2. Generate the portal login and fresh local keys with your own domain.
 
    ```bash
    php initialize.php /srv/ro-portal-private https://portal.example.invalid
    ```
 
-   Das Skript zeigt das neu erzeugte Portalpasswort einmal im Terminal an. PHP braucht lesenden Zugriff auf `settings.php` und Schreibzugriff auf das SQLite-Verzeichnis. Die separate Worker-Konfiguration enthält den privaten Schlüssel und gehört auf den Spielserver. Übertrage sie nur über deinen eigenen administrativen Zugang.
-3. Spiele das [Schemaskript](worker/rathena-bridge.sql) in deine eigene rAthena-Datenbank ein. Lege dort ein separates Konto `ro_registration` mit einem frisch erzeugten Passwort an. Gewähre nur `SELECT (userid)` und `INSERT (userid, user_pass, sex)` auf `ragnarok.login`, `SELECT, INSERT` auf `ragnarok.portal_jobs` sowie `SELECT` auf `ragnarok.portal_roster`. Erlaube den Zugriff nur aus dem eigenen Servernetz. Trage das neu erzeugte Datenbankpasswort in der Worker-Konfiguration ein.
-4. Installiere auf dem Linux-Spielserver Python 3, PyMySQL und libsodium. Die mitgelieferten Systemd-Dateien erwarten den eigenen Linux-Dienstbenutzer `ragnarok-portal`, das Skript unter `/usr/local/lib/ragnarok-portal/worker.py` und die Konfiguration unter `/etc/ragnarok-portal/config.json`. Der Dienstbenutzer braucht Lesezugriff auf die Worker-Konfiguration. Bei anderen Compose-Namen passe Container und Netzwerk im Dienst an. Ohne Systemd kannst du `worker.py` mit deiner Konfiguration periodisch ausführen und `database.host` darin selbst setzen. Entferne dazu `database_host_file`.
-5. Kopiere die Service- und Timerdatei in dein Systemd-Verzeichnis, führe `systemctl daemon-reload` und dann `systemctl enable --now portal-worker.timer` aus. Teste mit einem neu angelegten Testaccount, dass die Anmeldung und die Weitergabe der Registrierung funktionieren.
+   Setup prints the newly generated portal password once. PHP needs to read `settings.php` and write to the SQLite directory. The separate worker config contains the private key and belongs on your game server. Transfer it using your own administrative connection.
+3. Import the [database schema](worker/rathena-bridge.sql) into rAthena. Create the `ro_registration` database account with a new password. Grant `SELECT (userid)` and `INSERT (userid, user_pass, sex)` on `ragnarok.login`, `SELECT, INSERT` on `ragnarok.portal_jobs`, and `SELECT` on `ragnarok.portal_roster`. Restrict access to your server network and enter the database password in the worker config.
+4. Install Python 3, PyMySQL, and libsodium on the Linux game server. The provided systemd units expect the service user `ragnarok-portal`, the script at `/usr/local/lib/ragnarok-portal/worker.py`, and its config at `/etc/ragnarok-portal/config.json`. The service user needs read access to the config. If your Compose names differ, update the container and network names in the service. Without systemd, run `worker.py` periodically with your config. Remove `database_host_file` and set `database.host` directly in that case.
+5. Copy the service and timer units into your systemd directory. Run `systemctl daemon-reload`, then `systemctl enable --now portal-worker.timer`. Check portal login and account provisioning using a fresh test account.
 
-Optional kannst du eine zulässige ZIP mit Client-Quellcode als `client-source.zip` im privaten Portalverzeichnis bereitstellen. Die passende Datei `client-source.sha256` enthält die SHA-256 in Hex. Das Portal liefert sie nur nach Anmeldung aus.
+You can optionally place a source-code archive you have the right to distribute at `client-source.zip` in the private portal directory. Its companion `client-source.sha256` contains the hexadecimal SHA-256 checksum. The portal serves the archive after login.

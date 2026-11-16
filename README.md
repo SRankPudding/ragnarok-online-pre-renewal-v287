@@ -1,14 +1,14 @@
 # Ragnarok Online - Pre-Renewal v2.87
 
-Ein inoffizielles Fun-Projekt für klassisches Ragnarok Online. Entstanden für eine kleine Runde, die mehr Quest-Navigation, schnelleres Leveln und eigene Komfortfunktionen ausprobieren wollte. Dieser Stand ist als Abschluss des Hobbyprojekts gedacht. Regelmäßige Updates und Support sind nicht geplant.
+An unofficial fan project for classic Ragnarok Online. Built for a small group of friends who wanted clearer quest navigation, faster leveling, and a few quality-of-life changes. This is the final hobby release. Regular updates and support are not planned.
 
-| Bereich | Inhalt |
+| Section | Contents |
 | --- | --- |
-| [Installation](INSTALLATION.md) | Frischer Server, eigene Adresse, eigener Spielaccount und Start des Clients |
-| [Änderungen](CHANGELOG.md) | Spielregeln, Serverfunktionen, Client und bekannte Lücken |
-| [Lizenz und Inhalte](NOTICE.md) | Upstream-Projekte, GPLv3 und Spieldateien |
-| [Server](server/) | Docker-Build, rAthena-Patches, NPC-Skripte und Game-DB-Imports |
-| [Client](client/) | Quellcode-Overlay für roBrowserLegacy und Einrichtungsskript |
-| [Account-Website](website/) | Optionale Blankovorlage für Anmeldung, Spielkonten und Download |
+| [Installation](INSTALLATION.md) | Set up a fresh server, configure its address, create a game account, and run the client |
+| [Changelog](CHANGELOG.md) | Gameplay changes, server features, client features, and known gaps |
+| [License and credits](NOTICE.md) | Upstream projects, GPLv3, and game assets |
+| [Server](server/) | Docker build, rAthena patches, NPC scripts, and game database imports |
+| [Client](client/) | roBrowserLegacy source overlay and setup scripts |
+| [Account website](website/) | Optional template for portal login, game account registration, and downloads |
 
-Der Server verwendet Pre-Renewal mit **Packet-Version 20211103**. Das Client-Overlay entspricht **v2.87**. Beide lassen sich für einen eigenen Server konfigurieren. Das Paket enthält dafür Quellcode und Vorlagen. Die zum Spielen benötigten Spieldaten stellst du aus einer eigenen zulässigen Quelle bereit.
+The server uses Pre-Renewal with **packet version 20211103**. The client overlay is **v2.87**. Both can be configured for your own server. This package provides source code and templates. Obtain the game assets separately from a source you have the right to use.

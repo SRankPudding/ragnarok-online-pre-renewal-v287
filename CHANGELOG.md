@@ -1,28 +1,28 @@
-# Was sich gegenüber Pre-Renewal geändert hat
+# Changes from standard Pre-Renewal
 
 ## Server
 
-| Bereich | Stand v2.87 |
+| Area | v2.87 |
 | --- | --- |
-| Technische Basis | rAthena, Commit `1ca3e7700939ea40120cb51a777f8681ba5e84ae`, Pre-Renewal, Packet-Version 20211103, MariaDB 11.4 und Docker |
-| Leveln | 2.500 % Base-, Job-, Quest- und MVP-EXP. Zusätzliche Level-Checkpoints begleiten die Story. Mehr Traglast, erweiterbare Inventarplätze und zusätzliche Zeny für Monster und Questabschlüsse |
-| Beute | 30 % Karten-Drop laut Battle-Konfiguration. Separater Zusatzwurf für Waffen und Rüstungen mit je 20 %. Bonusmaterialien mit 18 %. Pet Treats in den Karten-Dropdaten mit 40 % |
-| Haustiere | Ein Pet Treat startet den Fangversuch. Basis-Fangchance 60 %, nach Fehlschlägen steigt sie bis 100 %. Pets können Loot aufsammeln. Händler bieten Futter und Brutgeräte an |
-| Reisen | Stadtkristalle verbinden 21 Ziele für 100 Zeny. Klassenziele sind im Menü gekennzeichnet. Händler, Kafra und Kristalle haben unterschiedliche Markierungen auf der Minimap |
-| Crafting | 147 serverseitige Rezepte für Waffen, Metalle, Tränke, Kochen und Konverter. Die Kommandos für Herstellung, Sammelreparatur und Refine prüfen ihre Kosten am Server. Sammelreparatur kostet 5.000 Zeny pro beschädigtem Teil |
-| Enchantment | Ausrüstung kann mit einem wählbaren Statuswert bis +10 verbessert werden. Die späteren Stufen haben eine Fehlschlagchance. Enchantment zerstört oder verschlechtert den Gegenstand dabei nicht. Waffen können auf +10 einen zusätzlichen Effekt erhalten, der gegen Zeny neu gewürfelt werden kann |
-| Quests | Einführung für Haustier, Statuspunkte und Ausrüstung. Kapitel in Morroc, Payon, Geffen, Prontera, Izlude und Alberta. Auf das Mentor-Briefing folgt die Aufgabe für den echten Wechsel in eine reguläre zweite Klasse. Danach folgen sechs automatische Jagden für Base Level 50 bis 99. Eigene Quest-IDs stehen in `server/game-db/quest_db.yml` |
-| Komfort | WASD und Shift-Sprint, zusätzliche Händlerwaren, eigener Cash-Shop-Katalog. Die administrative Testgutschrift der privaten Installation ist in dieser Vorlage deaktiviert |
+| Platform | rAthena commit `1ca3e7700939ea40120cb51a777f8681ba5e84ae`, Pre-Renewal, packet version 20211103, MariaDB 11.4, and Docker |
+| Leveling | 2,500% Base, Job, quest, and MVP EXP. Story checkpoints, higher carrying capacity, expandable inventory, and additional Zeny from monsters and quests |
+| Loot | Card drops are set to 30%. Extra weapon and armor drops each roll at 20%, bonus materials at 18%, and Pet Treats are listed at 40% in map drops |
+| Pets | A Pet Treat starts taming. Base success is 60%, increasing to 100% after failures. Pets can collect loot. Merchants sell food and incubators |
+| Travel | City Crystals connect 21 destinations for 100 Zeny per trip. First-job destinations are labeled, and services have distinct minimap markers |
+| Crafting | 147 server-side recipes for weapons, metals, potions, food, and converters. The server validates crafting, repair, and refinement costs. Repair All costs 5,000 Zeny per damaged item |
+| Enchantment | Pick a stat and upgrade gear to +10. Later ranks can fail without damage or downgrades. +10 weapons can gain an additional effect that can be rerolled for Zeny |
+| Quests | Tutorials for pets, stats, and gear. Chapters in Morroc, Payon, Geffen, Prontera, Izlude, and Alberta. The mentor's quest leads to an actual second-job change and six automated hunting quests for Base Levels 50–99. See `server/game-db/quest_db.yml` |
+| Quality of life | WASD, Shift sprint, additional shop goods, and a custom Cash Shop catalog. The private installation's test credit command is disabled in this template |
 
 ## Client
 
-- **Quests und Navigation:** Quest-Tracker links, Quest-Lexikon, Fortschritt für Kill- und Sammelziele, Abgabehinweise und Routen je Ziel. Die Fundortdaten enthalten Monster, Karten und bekannte Händler. Fernziele zeigen einen geeigneten Stadtkristall. Kartenklicks können Navigation und automatisches Laufen starten.
-- **Klassen und Dungeons:** Class Guide mit dem Einstieg in alle 13 regulären zweiten Klassen, Stats Guide und Rebirth-Hinweisen. Dungeon Codex mit Levelbereichen, Monstern, Beute und Eingängen. Für ausgewählte Klassenquests gibt es detaillierte Prüfungsanleitungen.
-- **Karte und HUD:** Minimap mit Ausgängen, Händler- und Questmarkierungen. Innenkarten ohne Bild erhalten einen Grundriss aus begehbaren Feldern. Das Standardlayout zeigt Charakterinfo rechts, Minimap unten rechts, Aktionsleiste oberhalb des Chats sowie getrennte Base- und Job-EXP-Balken.
-- **Ausrüstung:** Inventarfilter, sichtbare Enchantment-Stufen, gemeinsames Ausrüstungs- und Statusfenster und eigener Enchantment-Dialog. Crafting zeigt Zutaten, Mengen, Fundorte und Rechtsklick-Beschreibungen. Repair All und Refine stehen separat zur Verfügung.
-- **Bedienung und Darstellung:** Angewählte Kämpfe und Schnellleisten, Cooldown-Anzeige, Kamerabewegung per Rechtsziehen und rahmenloser Vollbildmodus. Überarbeitete Login- und Charakterauswahl mit Klassen- und Levelanzeige, animierten Titelmotiven und wechselnden Ladebildern.
-- **Updates:** SHA-256-Abgleich pro Datei, Fortschrittsfenster und Zeitgrenzen. Der optionale Patcher kann ältere Clients direkt auf den vollständigen veröffentlichten Stand bringen.
+- **Quests and navigation.** Left-side tracker, Quest Lexicon, progress for kill and collection objectives, turn-in prompts, and routes per objective. Sources include monsters, maps, and known merchants. Distant destinations show a suitable City Crystal. Map clicks can start routing and automatic walking.
+- **Classes and dungeons.** Class Guide for all 13 regular second jobs, a Stats Guide, and Rebirth guidance. Dungeon Codex with level ranges, monsters, loot, and entrances. Selected job quests also have step-by-step test guides.
+- **Map and HUD.** Minimap exits, services, and quest markers. Indoor maps without an image use walkable tiles to draw a floor plan. The default layout includes character info on the right, a bottom-right minimap, a shortcut bar above chat, and separate Base and Job EXP bars.
+- **Equipment and crafting.** Inventory filters, visible enchantment levels, combined equipment and stats, and a dedicated enchantment window. Crafting shows ingredients, quantities, sources, and right-click item details. Repair All and Refine have separate buttons.
+- **Controls and presentation.** Combat shortcuts, cooldown indicators, right-drag camera control, and borderless fullscreen. The login and character selection show updated artwork and clearer class and level details. Title backgrounds animate and loading illustrations rotate.
+- **Updates.** The optional patcher uses per-file SHA-256 checks, a progress window, and time limits. Older clients can update directly to the full published version.
 
-## Stand und Grenzen
+## Known limits
 
-Das Paket spiegelt die abgeschlossene Hobbyfassung wider. Für geskriptete Questziele ohne strukturierte Daten kann der Client nur die vorhandene Questbeschreibung anzeigen. Die sechs Weltjagden sind enthalten. Gesonderte kampffreie Erkundungsquests und Klassen-Sets als Meilensteinbelohnungen waren noch offen. Eigene private Musik und zusätzliche Weltkartenmotive wurden bei der Quellcode-Aufbereitung entfernt.
+Scripted quest objectives without structured data rely on the existing quest description. The six world hunts are included. Separate non-combat exploration quests and milestone class sets were unfinished. Private music and additional world map illustrations are excluded from the source package.

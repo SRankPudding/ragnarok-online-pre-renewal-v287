@@ -1,12 +1,12 @@
-# Installation auf dem eigenen Rechner
+# Installation
 
-## 1. Linux-Server vorbereiten
+## Linux server
 
-Benötigt werden Docker mit Compose, Git und OpenSSL. Entpacke den Quellcode in ein eigenes Verzeichnis. Verwende eine frische Installation und eine IPv4-Adresse, auf der Docker am Server binden kann. Für Tests auf dem Server selbst geht `127.0.0.1`. Im LAN findest du die Adresse des Servers mit `ip -4 -brief address`.
+Install Docker with Compose, Git, and OpenSSL. Use a fresh directory and an IPv4 address the server can bind to. For testing on the server itself, use `127.0.0.1`. To find the server's LAN address, run `ip -4 -brief address`.
 
 ```bash
 cd server
-read -rp "Eigene Server-IPv4: " SERVER_IP
+read -rp "Server IPv4: " SERVER_IP
 sudo bash scripts/prepare-runtime.sh "$SERVER_IP"
 sudo docker build -f docker/Dockerfile \
   --build-arg RATHENA_REV=1ca3e7700939ea40120cb51a777f8681ba5e84ae \
@@ -16,44 +16,44 @@ sudo docker compose --env-file .env -f docker/compose.yaml up -d
 sudo docker compose --env-file .env -f docker/compose.yaml logs -f login char map
 ```
 
-Der erste Schritt erzeugt lokal neue Datenbank- und Serverpasswörter. Das interne Datenbanknetz hat keinen veröffentlichten Datenbankport. Die Spielports sind **6900**, **6121** und **5121** über TCP. Teste zuerst lokal oder im LAN. Für entfernte Mitspieler brauchst du eine dafür eingerichtete Verbindung und passende Firewallregeln.
+Setup generates new database and server passwords locally. MariaDB stays on the internal Docker network. The TCP game ports are **6900**, **6121**, and **5121**. Test on your machine or LAN first. Remote players need a suitable network connection and firewall rules.
 
-### Spielaccount anlegen
+### Create a game account
 
-Die selbstständige Registrierung ist standardmäßig aus. Für einen privaten Test lässt sie sich per `new_account: yes` in `runtime/rathena-import/login_conf.txt` aktivieren. Ändere die vorhandene Zeile und starte den Login-Dienst neu.
+Self-registration is off by default. For a private test, change the existing `new_account` setting to `yes` in `runtime/rathena-import/login_conf.txt`, then restart the login service.
 
 ```bash
 sudo docker compose --env-file .env -f docker/compose.yaml restart login
 ```
 
-Melde dich für die Registrierung im Client mit deinem neuen Spielernamen plus `_M` oder `_F` und einem eigenen Passwort an. Spätere Logins verwenden den Namen ohne Suffix. Setze nach der Registrierung `new_account: no` und starte den Login-Dienst erneut. Bewahre die erzeugten Geheimnisse außerhalb eines öffentlichen Repositories auf.
+To register, log in using a new username with the `_M` or `_F` suffix and a password of your choice. Use the username without the suffix for subsequent logins. Set `new_account: no` and restart the login service after registration. Keep generated secrets outside public repositories. The [optional account website](website/) offers invitation-based registration.
 
-### Bestehende Server-IP ändern
+### Change the server IP
 
-1. Trage in `server/.env` die neue Adresse bei `RO_LAN_IP` ein.
-2. Ändere in `server/runtime/rathena-import/char_conf.txt` die Einstellung `char_ip` und in `map_conf.txt` die Einstellung `map_ip` auf dieselbe neue IPv4. Die internen Namen `login`, `char` und `db` im Docker-Netz bleiben als Dienstnamen eingetragen.
-3. Führe `sudo docker compose --env-file .env -f docker/compose.yaml up -d --force-recreate login char map` aus `server/` aus. Dadurch werden Bindeadressen und angekündigte Adressen übernommen.
-4. Übergib die neue Adresse beim Client-Start ebenfalls als `-ServerHost`.
+1. Update `RO_LAN_IP` in `server/.env`.
+2. Update `char_ip` in `server/runtime/rathena-import/char_conf.txt` and `map_ip` in `map_conf.txt` to the new IPv4 address. Leave `login`, `char`, and `db` as internal Docker service names.
+3. From `server/`, run `sudo docker compose --env-file .env -f docker/compose.yaml up -d --force-recreate login char map`.
+4. Pass the new address to the client with `-ServerHost`.
 
-## 2. Windows-Client vorbereiten
+## Windows client
 
-Benötigt werden Git, Node.js ab Version 22 und PowerShell. Aus dem Paketordner ausführen.
+Install Git, Node.js 22 or later, and PowerShell. From the package directory, run:
 
 ```powershell
 .\client\prepare-client.ps1
 ```
 
-Das Skript lädt die dokumentierte Revision von roBrowserLegacy, kopiert die Änderungen und installiert die Client-Abhängigkeiten. Lege einen kompatiblen, rechtmäßig bezogenen Satz Spieldaten in `client/assets/`. Die gepflegte Installation erwartete dort `data.grf` sowie passende Zusatzordner wie `SystemEN`, `System`, `data` und `BGM`. Inhalt und Struktur hängen von deiner Client-Quelle ab. Das freie Quellcodepaket enthält keine GRFs.
+Setup fetches the pinned roBrowserLegacy revision, applies the overlay, and installs dependencies. Put compatible game assets from a source you have the right to use into `client/assets/`. The original installation expected `data.grf` and compatible folders such as `SystemEN`, `System`, `data`, and `BGM`. The exact contents depend on your source. This package ships no GRFs.
 
 ```powershell
-$serverHost = Read-Host 'Server-IP oder Hostname'
+$serverHost = Read-Host 'Server IP or hostname'
 .\client\start-client.ps1 -ServerHost $serverHost
 ```
 
-Für den lokalen Server kannst du ohne Argument starten. Für LAN-Verbindungen gib die IPv4 des Linux-Servers ein. Das Skript setzt `RO_SERVER_HOST` für den Start und legt das Profil lokal an. Die Adresse lässt sich bei jedem Start ändern. Die Packet-Version **20211103** muss auf beiden Seiten zusammenpassen.
+Omit the argument for a local server. For LAN play, enter the Linux server's IPv4 address. The start script sets `RO_SERVER_HOST` and creates a local profile. Both sides must use packet version **20211103**.
 
-Der optionale Patcher wird erst mit einer eigenen `update-config.json` neben `patcher.mjs` aktiv. Sie enthält `{"url":"https://example.invalid/ro-update/"}` als Muster. Betreibe einen eigenen Update-Endpunkt mit vollständigem Manifest und SHA-256 je Datei. Das Quellcodepaket ist für den Start ohne eigenen Patchserver vorbereitet.
+The optional patcher activates when you create `update-config.json` next to `patcher.mjs`. For example, use `{"url":"https://example.invalid/ro-update/"}` with your own update URL. Serve a full manifest with SHA-256 for each file. The client also runs without a patch endpoint.
 
-## 3. Funktionsprüfung
+## Verify the installation
 
-Prüfe den Login, die Charaktererstellung, einen Kartenwechsel und danach erneut den Login. Teste vor einer Weitergabe auch Crafting, Stadtteleport und Refine. Bewahre bei Serveränderungen einen Datenbank-Dump auf und prüfe den Restore in einer separaten Instanz. Die Blanko-Installation befindet sich auf dem dokumentierten Quellstand. Ein kompletter Neubau mit einem separaten Satz Spielassets ist Teil der Abnahme.
+Test login, character creation, a map transition, and a second login. Before distributing a build, test crafting, City Crystals, and refinement. Before server upgrades, make a database backup and test restoring it in a separate instance. A full clean build and gameplay test with a separate asset set is still pending for this source package.
